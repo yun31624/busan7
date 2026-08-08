@@ -1,0 +1,2058 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>釜山母女旅行 8/13–8/20</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&family=Noto+Serif+TC:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="top">
+  <div class="sun-glow" aria-hidden="true"></div>
+  <div class="top-inner">
+    <p class="eyebrow">媽媽與我的</p>
+    <h1>釜山七日慢旅</h1>
+    <p class="dates">2026年8月13日（四）— 8月20日（四）</p>
+  </div>
+  <svg class="skyline" viewBox="0 0 800 180" preserveAspectRatio="none" aria-hidden="true">
+    <!-- 夕陽 -->
+    <circle cx="430" cy="58" r="26" fill="rgba(255,241,214,0.85)"/>
+    <!-- 廣安大橋 -->
+    <path d="M 60 140 Q 60 70 140 70 Q 220 70 220 140" fill="none" stroke="rgba(255,255,255,0.6)" stroke-width="3"/>
+    <line x1="90" y1="78" x2="90" y2="140" stroke="rgba(255,255,255,0.45)" stroke-width="2"/>
+    <line x1="120" y1="71" x2="120" y2="140" stroke="rgba(255,255,255,0.45)" stroke-width="2"/>
+    <line x1="160" y1="71" x2="160" y2="140" stroke="rgba(255,255,255,0.45)" stroke-width="2"/>
+    <line x1="190" y1="78" x2="190" y2="140" stroke="rgba(255,255,255,0.45)" stroke-width="2"/>
+    <!-- 高樓剪影 -->
+    <rect x="250" y="60" width="22" height="80" fill="rgba(255,255,255,0.2)"/>
+    <rect x="278" y="40" width="18" height="100" fill="rgba(255,255,255,0.28)"/>
+    <rect x="300" y="75" width="16" height="65" fill="rgba(255,255,255,0.2)"/>
+    <rect x="600" y="55" width="20" height="85" fill="rgba(255,255,255,0.22)"/>
+    <rect x="625" y="30" width="16" height="110" fill="rgba(255,255,255,0.3)"/>
+    <rect x="645" y="68" width="18" height="72" fill="rgba(255,255,255,0.2)"/>
+    <!-- 松島纜車纜線 + 車廂 -->
+    <line x1="350" y1="92" x2="500" y2="50" stroke="rgba(255,255,255,0.45)" stroke-width="2"/>
+    <rect x="410" y="65" width="16" height="12" rx="2" fill="rgba(255,255,255,0.6)"/>
+    <!-- 海鷗 -->
+    <path d="M 100 35 Q 108 28 116 35" fill="none" stroke="rgba(255,255,255,0.5)" stroke-width="2" stroke-linecap="round"/>
+    <path d="M 700 45 Q 708 38 716 45" fill="none" stroke="rgba(255,255,255,0.5)" stroke-width="2" stroke-linecap="round"/>
+    <!-- 海浪 -->
+    <path d="M 0 150 Q 50 140 100 150 T 200 150 T 300 150 T 400 150 T 500 150 T 600 150 T 700 150 T 800 150 L 800 180 L 0 180 Z" fill="rgba(255,255,255,0.14)"/>
+    <path d="M 0 160 Q 60 152 120 160 T 240 160 T 360 160 T 480 160 T 600 160 T 720 160 T 800 160 L 800 180 L 0 180 Z" fill="rgba(255,255,255,0.2)"/>
+  </svg>
+  <div class="wave" aria-hidden="true"></div>
+</header>
+
+<nav class="maintabs" id="maintabs" aria-label="選擇主分頁">
+  <button class="main-tab active" data-main="itinerary">🗓️<span>每日行程</span></button>
+  <button class="main-tab" data-main="booking">✈️<span>機票住宿</span></button>
+  <button class="main-tab" data-main="about">🌊<span>認識釜山</span></button>
+  <button class="main-tab" data-main="guide">🧳<span>旅遊錦囊</span></button>
+  <button class="main-tab" data-main="medical">💉<span>醫美情報</span></button>
+  <button class="main-tab" data-main="budget">💰<span>記帳本</span></button>
+</nav>
+
+<button id="rateWidgetToggle" class="rate-fab" aria-label="開啟匯率換算小工具">💱</button>
+<div id="rateWidget" class="rate-widget hidden">
+  <div class="rate-widget-head">
+    <p>韓元 → 台幣 隨手換算</p>
+    <button id="rateWidgetClose" aria-label="關閉">✕</button>
+  </div>
+  <div class="rate-widget-body">
+    <div class="rate-widget-row">
+      <span>₩</span>
+      <input type="number" id="quickKRW" placeholder="輸入韓元金額" inputmode="numeric">
+    </div>
+    <p class="rate-widget-result">約 <strong id="quickTWD">NT$0</strong></p>
+    <p class="rate-widget-note">換算匯率與記帳本共用，可在記帳本分頁調整</p>
+  </div>
+</div>
+
+<main class="content">
+
+<!-- ════════════════ 主分頁一：每日行程 ════════════════ -->
+<div class="main-pane active" id="itinerary">
+
+<nav class="daynav" id="daynav" aria-label="選擇日期">
+
+  <button class="day-pill active" data-day="d1">8/13<span>週四・抵達</span></button>
+  <button class="day-pill" data-day="d2">8/14<span>週五・龍宮膠囊</span></button>
+  <button class="day-pill" data-day="d3">8/15<span>週六・南浦廣安</span></button>
+  <button class="day-pill" data-day="d4">8/16<span>週日・展望Oasis</span></button>
+  <button class="day-pill" data-day="d5">8/17<span>週一・移宿西面</span></button>
+  <button class="day-pill medical" data-day="d6">8/18<span>週二・醫美日</span></button>
+  <button class="day-pill medical" data-day="d7">8/19<span>週三・田浦室內</span></button>
+  <button class="day-pill" data-day="d8">8/20<span>週四・返台</span></button>
+</nav>
+
+<div class="klook-banner">
+  <span class="klook-icon">🎫</span>
+  <p>橘色「Klook」標籤代表這個景點要事先在 <strong>Klook</strong> 上買票，我們已經整理在下面，記得提早買！</p>
+</div>
+
+<!-- ===== DAY 1 ===== -->
+<section class="day-pane active" id="d1">
+  <div class="day-head">
+    <h2>8月13日（週四）</h2>
+    <p class="day-sub">啟程抵達，直奔海雲台飯店</p>
+    <p class="hotel-badge">🏨 住宿：東橫INN 海雲台海景2號店（住到 8/17）</p>
+  </div>
+<div class="weather-box" id="weather-d1" data-date="2026-08-13"><span class="weather-icon">🌤️</span><span class="weather-loading">天氣資訊載入中…</span></div>
+
+
+  <div class="timeline">
+    <article class="event">
+      <div class="event-time">19:55</div>
+      <div class="event-body">
+        <h3>抵達金海國際機場</h3>
+        <p>預計 21:00 左右出關，領完行李後準備前往飯店。可以先在入境大廳找 ATM 領一些韓元現金，或在便利商店買 T-money 交通卡，之後搭地鐵公車都會方便很多。</p>
+      </div>
+    </article>
+
+    <div class="transport">
+      <p class="transport-label">🚕 機場 → 東橫INN 海雲台</p>
+      <div class="transport-option">
+        <p class="transport-option-label">建議搭計程車</p>
+        <p>21:00 出關直接在入境大廳外排班計程車排隊處搭車，約 45–50 分鐘可達，車資約 ₩28,000–35,000（約台幣 670–840 元）。司機大多看得懂飯店韓文地址，上車前可以把地址截圖給司機看。</p>
+      </div>
+      <div class="transport-option">
+        <p class="transport-option-label">大眾運輸（較省但較久）</p>
+        <p>搭金海輕軌到「沙上」站，轉地鐵 2 號線到「海雲台」站，全程約 60–75 分鐘，車資約 ₩1,800。晚上班次間隔變長，行李多的話不建議。</p>
+      </div>
+      <p class="transport-tip">💡 小提醒：晚上 9 點後計程車會有夜間加成（約多 20%），但行李多、人也累了，還是直接搭車最輕鬆。</p>
+    </div>
+
+    <article class="event">
+      <div class="event-time">21:00</div>
+      <div class="event-body">
+        <h3>晚餐／宵夜：魏然醒酒馬鈴薯排骨湯（海雲台店）<span class="duration">⏱ 約 1 小時</span></h3>
+        <a class="map-btn-small" href="https://www.google.com/maps/search/?api=1&query=Wiyeon+Pork+and+Rice+Soup+Haeundae+Busan" target="_blank" rel="noopener">📍 開啟地圖導航</a>
+        <p class="tag-row"><span class="tag tag-green">24小時營業</span></p>
+        <p>24小時都有熱騰騰的濃郁大骨湯，再晚到也不怕餓肚子。湯頭是用豬骨慢熬，喝起來溫潤不會太重口味，配白飯一起吃很有飽足感，是釜山在地人的深夜食堂首選。</p>
+        <div class="must-try">
+          <p class="must-try-label">店內必點</p>
+          <div class="must-try-grid">
+            <div class="must-try-item">
+              <p class="must-try-name">감자탕 馬鈴薯排骨湯</p>
+              <p class="must-try-desc">招牌主餐，大塊排骨燉到軟爛，湯頭濃郁帶骨香</p>
+            </div>
+            <div class="must-try-item">
+              <p class="must-try-name">공기밥 白飯</p>
+              <p class="must-try-desc">配湯一起吃，可以加點，吃飽剛好收尾這趟旅程第一餐</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <div class="planb">
+      <p class="planb-label">💡 備案</p>
+      <p>Puradak 炸雞 海雲台中洞店，開到凌晨 1 點，黑蒜炸雞配辣椒美乃滋很涮嘴，配 Mega Coffee 一起外帶回飯店吃。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== DAY 2 ===== -->
+<section class="day-pane" id="d2">
+  <div class="day-head">
+    <h2>8月14日（週五）</h2>
+    <p class="day-sub">海東龍宮寺、斜坡滑車與藍線膠囊列車</p>
+    <p class="hotel-badge">🏨 住宿：東橫INN 海雲台</p>
+  </div>
+<div class="weather-box" id="weather-d2" data-date="2026-08-14"><span class="weather-icon">🌤️</span><span class="weather-loading">天氣資訊載入中…</span></div>
+
+
+  <p class="klook-tag">🎫 今天要用 Klook：Skyline Luge 斜坡滑車門票、海雲台藍線公園 Sky Capsule 膠囊列車（要提前至少 2 週訂票！萬一沒搶到，下面有 Plan B）</p>
+
+  <div class="timeline">
+    <article class="event">
+      <div class="event-time">09:00</div>
+      <div class="event-body">
+        <h3>海東龍宮寺<span class="duration">⏱ 約 1–1.5 小時</span></h3>
+        <a class="map-btn-small" href="https://www.google.com/maps/search/?api=1&query=Haedong+Yonggungsa+Temple" target="_blank" rel="noopener">📍 開啟地圖導航</a>
+        <p class="tag-row"><span class="tag tag-blue">早去人少</span></p>
+        <p>建在臨海礁岩上，是全韓國最美的海邊古寺，也是韓國三大觀音聖地之一。入口處有一段下坡石階通往海邊，沿路可以看到生肖石像，往下走到底就是面海而建的主殿，海浪拍打礁岩的聲音很療癒。</p>
+        <div class="must-try">
+          <p class="must-try-label">參觀重點</p>
+          <div class="must-try-grid">
+            <div class="must-try-item">
+              <p class="must-try-name">十二生肖石像</p>
+              <p class="must-try-desc">入口階梯兩側，可以找自己的生肖拍照</p>
+            </div>
+            <div class="must-try-item">
+              <p class="must-try-name">海邊主殿</p>
+              <p class="must-try-desc">韓國少見建在海邊礁岩上的寺廟，日出時分景色最美</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <div class="transport">
+      <p class="transport-label">🚕 飯店 → 海東龍宮寺</p>
+      <div class="transport-option">
+        <p class="transport-option-label">建議搭計程車</p>
+        <p>約 15–20 分鐘可達，車資約 ₩10,900–13,500（約台幣 260–320 元）。</p>
+      </div>
+      <div class="transport-option">
+        <p class="transport-option-label">大眾運輸（較省但較久）</p>
+        <p>海雲台站搭公車 181、100、139 或 1001 號，到「龍宮寺．國立水產科學館」站下車，車程約 35 分鐘，下車後還要走上坡路約 10 分鐘才到入口，車資約 ₩1,500。</p>
+      </div>
+      <p class="transport-tip">💡 小提醒：寺廟內地形高低落差大、階梯多，建議穿好走的鞋，媽媽走起來會比較輕鬆。</p>
+    </div>
+
+    <article class="event">
+      <div class="event-time">10:30</div>
+      <div class="event-body">
+        <h3>Skyline Luge 斜坡滑車<span class="duration">⏱ 約 1–1.5 小時</span></h3>
+        <a class="map-btn-small" href="https://www.google.com/maps/search/?api=1&query=Skyline+Luge+Busan" target="_blank" rel="noopener">📍 開啟地圖導航</a>
+        <p class="tag-row"><span class="tag tag-green">⭐ 評價 4.5</span><span class="tag tag-gray">10:00–19:00（週末至 20:00）</span></p>
+        <p>從紐西蘭引進的無動力滑車，先搭空中吊椅上山，再自己控制速度滑下來，山路、海景兩條路線都很值得玩。地址在機張，海東龍宮寺旁邊，動線非常順。第一次玩會先有教練簡單教學，操作不難，手把往前推加速、往後拉減速，很適合親子或不同年齡層一起玩。</p>
+        <div class="must-try">
+          <p class="must-try-label">玩法建議</p>
+          <div class="must-try-grid">
+            <div class="must-try-item">
+              <p class="must-try-name">至少買 2 次券</p>
+              <p class="must-try-desc">第一趟練習熟悉操作，第二趟可以放心加速衝刺</p>
+            </div>
+            <div class="must-try-item">
+              <p class="must-try-name">海景路線</p>
+              <p class="must-try-desc">沿途可以看到機張海岸線，風景比山路線更開闊</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <div class="transport">
+      <p class="transport-label">🚕 海東龍宮寺 → Skyline Luge 斜坡滑車</p>
+      <div class="transport-option">
+        <p class="transport-option-label">建議直接步行</p>
+        <p>從龍宮寺下坡走過去約 12 分鐘，這段路本來就是順路，不用特地搭車。</p>
+      </div>
+      <div class="transport-option">
+        <p class="transport-option-label">如果想省腳力</p>
+        <p>可在龍宮寺門口叫計程車，車程約 5 分鐘，車資約 ₩4,800 起跳。</p>
+      </div>
+    </div>
+
+    <div class="planb">
+      <p class="planb-label">💡 備案：想吃螃蟹的話</p>
+      <p>機張市場就在附近，車程約 10–15 分鐘，現撈帝王蟹、松葉蟹，還有蟹膏炒飯，可以代替午餐的海鮮刀切麵。</p>
+    </div>
+
+    <article class="event">
+      <div class="event-time">12:00</div>
+      <div class="event-body">
+        <h3>午餐：海雲台31cm海鮮刀切麵<span class="duration">⏱ 約 1 小時</span></h3>
+        <a class="map-btn-small" href="https://www.google.com/maps/search/?api=1&query=31cm+Haemul+Kalguksu+Haeundae+Busan" target="_blank" rel="noopener">📍 開啟地圖導航</a>
+        <p>大碗公裝滿蛤蜊與淡菜，湯頭非常鮮甜，11:00 開門。麵條是現場手切的寬麵，吸飽海鮮湯頭很有口感，份量偏大，兩人可以考慮一份大碗加一份小菜分食。</p>
+        <div class="must-try">
+          <p class="must-try-label">店內必點</p>
+          <div class="must-try-grid">
+            <div class="must-try-item">
+              <p class="must-try-name">해물칼국수 海鮮刀切麵</p>
+              <p class="must-try-desc">招牌主餐，滿滿蛤蜊淡菜，湯頭清甜不死鹹</p>
+            </div>
+            <div class="must-try-item">
+              <p class="must-try-name">왕만두 大顆水餃</p>
+              <p class="must-try-desc">內餡紮實，沾醋醬油一起吃很開胃</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <div class="transport">
+      <p class="transport-label">🚕 斜坡滑車 → 海雲台午餐處</p>
+      <div class="transport-option">
+        <p class="transport-option-label">建議搭計程車</p>
+        <p>約 15–20 分鐘可達，車資約 ₩10,000–13,000。</p>
+      </div>
+      <div class="transport-option">
+        <p class="transport-option-label">大眾運輸（較省但較久）</p>
+        <p>搭公車 181、139 或 1001 回海雲台，車程約 35–40 分鐘，車資約 ₩1,500。</p>
+      </div>
+    </div>
+
+    <article class="event">
+      <div class="event-time">13:30</div>
+      <div class="event-body">
+        <h3>海雲台藍線公園膠囊列車（尾浦站）<span class="duration">⏱ 約 1.5–2 小時</span></h3>
+        <a class="map-btn-small" href="https://www.google.com/maps/search/?api=1&query=Haeundae+Blueline+Park+Mipo+Station" target="_blank" rel="noopener">📍 開啟地圖導航</a>
+        <p class="tag-row"><span class="tag tag-klook">已提前購票</span></p>
+        <a class="map-btn-small" href="https://tket.me/7oGpTAl" target="_blank" rel="noopener">📱 手機票證連結</a>
+        <p>彩色膠囊列車從 7–10 公尺高空欣賞大海美景，是拍照必去的浪漫景點。全程約 4.8 公里，單趟約 30 分鐘，車廂內可以拍到海岸線和遠方的廣安大橋。建議提早 15–20 分鐘到車站，先到月台拍照、買周邊。</p>
+        <div class="must-try">
+          <p class="must-try-label">玩法建議</p>
+          <div class="must-try-grid">
+            <div class="must-try-item">
+              <p class="must-try-name">單程膠囊列車</p>
+              <p class="must-try-desc">建議只搭單程，下車後改搭沙灘列車或散步回程更省時間</p>
+            </div>
+            <div class="must-try-item">
+              <p class="must-try-name">靠海側座位</p>
+              <p class="must-try-desc">買票時可以選靠海景觀的座位，視野會更好</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <div class="planb">
+      <p class="planb-label">⚠️ 萬一沒搶到膠囊列車車票，這個時段這樣安排</p>
+      <p>膠囊列車是熱門票券，旺季常常開賣秒殺。如果沒搶到，<strong>不建議當天臨時找海雲台周邊景點補位</strong>，因為這個時段（13:30–16:00）附近沒有同等級的替代景點，硬塞容易讓行程變鬆散。比較順的做法是把這天的午餐後行程直接縮短，提早前往晚上的廣安里散步，並把 8/15（南浦洞那天）原本的「南浦延伸路線」備案（ept ＋ Arte Museum）正式排進去，那天動線完全順路、不用走回頭路，可以玩得更盡興，等於把這天空出來的時間挪到隔壁那天用。</p>
+      <div class="must-try">
+        <div class="must-try-grid">
+          <div class="must-try-item">
+            <p class="must-try-name">8/15 加開 ept ＋ Arte Museum</p>
+            <p class="must-try-desc">詳見 8/15 富平罐頭市場後的「南浦延伸路線」備案，影島區跟南浦同一塊，順路不繞路</p>
+          </div>
+          <div class="must-try-item">
+            <p class="must-try-name">8/14 改成悠閒提早收工</p>
+            <p class="must-try-desc">海雲台甜點散步＋早點到廣安里，輕鬆步調剛好留體力給晚上</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <article class="event">
+      <div class="event-time">15:00</div>
+      <div class="event-body">
+        <h3>備案：海雲台甜點散步 或 二樓咖啡廳拍膠囊列車<span class="duration">⏱ 約 1 小時</span></h3>
+        <p>沒搭到膠囊列車的話，有兩種悠閒版玩法可以擇一：</p>
+        <div class="must-try">
+          <div class="must-try-grid">
+            <div class="must-try-item">
+              <p class="must-try-name">🚶 海雲台沙灘散步</p>
+              <p class="must-try-desc">從午餐處走到海雲台沙灘旁慢慢散步，看海、拍照、吃點甜點，這個時段人潮通常不多，很適合拍照</p>
+            </div>
+            <div class="must-try-item">
+              <p class="must-try-name">☕ 咖啡廳二樓拍膠囊列車</p>
+              <p class="must-try-desc">改到<a href="https://maps.app.goo.gl/X4qg8WrReaiCDQqC6?g_st=il" target="_blank" rel="noopener">這間咖啡廳</a>坐二樓，點杯咖啡邊休息邊等膠囊列車經過拍照，不用搶票也能拍到列車畫面</p>
+            </div>
+          </div>
+        </div>
+        <a class="map-btn-small" href="https://maps.app.goo.gl/X4qg8WrReaiCDQqC6?g_st=il" target="_blank" rel="noopener">📍 開啟咖啡廳地圖導航</a>
+      </div>
+    </article>
+
+    <article class="event">
+      <div class="event-time">16:00</div>
+      <div class="event-body">
+        <h3>散步外帶：自然島鹽麵包＋海雲台名品黑糖餅<span class="duration">⏱ 約 1 小時</span></h3>
+        <p>鹽麵包是最近很紅的甜點，剛出爐底層焦香奶油味十足（營業到 22:00）；黑糖餅在海雲台傳統市場口，是排隊第一名的店（營業到 23:00）。兩間步行距離很近，可以一次都買來邊走邊吃。</p>
+        <div class="must-try">
+          <p class="must-try-label">必買甜點</p>
+          <div class="must-try-grid">
+            <div class="must-try-item">
+              <p class="must-try-name">소금빵 鹽奶油麵包</p>
+              <p class="must-try-desc">外酥內軟，底部焦香奶油味明顯，趁熱吃最好吃</p>
+            </div>
+            <div class="must-try-item">
+              <p class="must-try-name">씨앗호떡 堅果黑糖餅</p>
+              <p class="must-try-desc">內餡黑糖漿加堅果，外皮現炸酥脆，是排隊名店</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <div class="planb">
+      <p class="planb-label">💡 備案：想看海發呆</p>
+      <p>Nasari食堂（羅沙里食堂）落地窗景直面大海；或 Liberta 咖啡廳，復古工業風（都營業到 22:00）。</p>
+    </div>
+
+    <article class="event">
+      <div class="event-time">19:30</div>
+      <div class="event-body">
+        <h3>廣安里海灘散步</h3>
+        <p>今天沒有無人機秀，純粹欣賞夜景，明天週六晚上才是正式看秀的日子。可以沿著海灘慢慢走，吹吹晚風，為明天的重頭戲先探探路。</p>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- ===== DAY 3 ===== -->
+<section class="day-pane" id="d3">
+  <div class="day-head">
+    <h2>8月15日（週六・光復節）</h2>
+    <p class="day-sub">南浦西面美食、Davich配眼鏡與廣安里無人機秀</p>
+    <p class="hotel-badge">🏨 住宿：東橫INN 海雲台</p>
+  </div>
+<div class="weather-box" id="weather-d3" data-date="2026-08-15"><span class="weather-icon">🌤️</span><span class="weather-loading">天氣資訊載入中…</span></div>
+
+
+  <div class="alert-box highlight">
+    ⚠️ 今天是韓國國定假日（光復節），有些餐廳可能公休，出發前最好先確認一下。<br>
+    ✨ 而且今天（8/15）正好是真正的週六——無人機秀晚上就排進來了！吃完石雞晚餐直接走去廣安里沙灘卡位，20:00 看秀，之後再去 BRONI 咖啡廳歇腳，順便等 22:00 那場（想看的話）。
+  </div>
+
+  <p class="klook-tag">🎫 今天要用 Klook：松島海上纜車（水晶車廂）</p>
+
+  <div class="timeline">
+    <article class="event">
+      <div class="event-time">09:30</div>
+      <div class="event-body">
+        <h3>松島海上纜車<span class="duration">⏱ 約 1.5–2 小時</span></h3>
+        <a class="map-btn-small" href="https://www.google.com/maps/search/?api=1&query=Songdo+Sea+Cable+Car+Busan" target="_blank" rel="noopener">📍 開啟地圖導航</a>
+        <p class="tag-row"><span class="tag tag-klook">Klook 預購</span><span class="tag tag-blue">09:00 開門</span></p>
+        <p>韓國第一條海上纜車，水晶車廂可以俯瞰整片松島灣，腳下就是大海，很壯觀。來回約 1.6 公里，單趟約 15–20 分鐘，建議早上人少時去搭，光線也比較好拍照。纜車站旁就是松島海水浴場，下纜車後可以沿著海邊步道散步一下。</p>
+        <div class="must-try">
+          <p class="must-try-label">玩法建議</p>
+          <div class="must-try-grid">
+            <div class="must-try-item">
+              <p class="must-try-name">水晶車廂（透明地板）</p>
+              <p class="must-try-desc">腳下直接看到海面，建議加價升級，視覺體驗差很多</p>
+            </div>
+            <div class="must-try-item">
+              <p class="must-try-name">松島龍宮雲橋</p>
+              <p class="must-try-desc">纜車站旁的海上吊橋，免費參觀，可順道走走拍照</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <div class="transport">
+      <p class="transport-label">🚕 飯店 → 松島纜車</p>
+      <div class="transport-option">
+        <p class="transport-option-label">建議搭計程車</p>
+        <p>從海雲台飯店直達約 30 分鐘，車資約 ₩18,000–22,000（約台幣 430–525 元）。距離較遠，建議直接叫車，不用轉乘比較省力。</p>
+      </div>
+      <div class="transport-option">
+        <p class="transport-option-label">大眾運輸（較省但較久）</p>
+        <p>海雲台站搭地鐵 2 號線到西面站，轉 1 號線到南浦站，出站後步行或轉乘公車到松島，全程約 55–65 分鐘，車資約 ₩1,800。轉乘次數多，早上時間有限不建議。</p>
+      </div>
+      <p class="transport-tip">💡 小提醒：松島纜車人潮通常在 11 點後變多，建議盡量早一點出發。</p>
+    </div>
+
+    <article class="event">
+      <div class="event-time">12:10</div>
+      <div class="event-body">
+        <h3>午餐：螞蟻家辣炒章魚（南浦總店）<span class="duration">⏱ 約 1–1.5 小時</span></h3>
+        <a class="map-btn-small" href="https://www.google.com/maps/search/?api=1&query=Gaemijip+Nampo+Busan" target="_blank" rel="noopener">📍 開啟地圖導航</a>
+        <p class="tag-row"><span class="tag tag-gray">10:00–22:00</span></p>
+        <p>全韓國開滿分店的創始發源總店，辣炒章魚牛腸蝦的元祖味道。辣度偏中辣，吃不太辣的話可以請店員少辣，店內提供白飯可以拌著醬汁吃。</p>
+        <div class="must-try">
+          <p class="must-try-label">店內必點</p>
+          <div class="must-try-grid">
+            <div class="must-try-item">
+              <p class="must-try-name">낙곱새 辣炒章魚牛腸蝦</p>
+              <p class="must-try-desc">招牌組合鍋，章魚、牛小腸、蝦三種口感一次吃到</p>
+            </div>
+            <div class="must-try-item">
+              <p class="must-try-name">볶음밥 炒飯</p>
+              <p class="must-try-desc">吃完主菜一定要加點，用剩下的醬汁炒飯超香</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <div class="transport">
+      <p class="transport-label">🚕 松島纜車 → 螞蟻家辣炒章魚（南浦）</p>
+      <div class="transport-option">
+        <p class="transport-option-label">建議直接步行或叫車</p>
+        <p>松島和南浦同屬一個區域，步行約 15–20 分鐘可達，天熱的話建議叫車，車程約 8–10 分鐘，車資約 ₩5,500–7,000。</p>
+      </div>
+    </div>
+
+    <article class="event">
+      <div class="event-time">13:30</div>
+      <div class="event-body">
+        <h3>富平罐頭市場散步<span class="duration">⏱ 約 1 小時</span></h3>
+        <a class="map-btn-small" href="https://www.google.com/maps/search/?api=1&query=Bupyeong+Kkangtong+Market+Busan" target="_blank" rel="noopener">📍 開啟地圖導航</a>
+        <p>韓國第一個常態型夜市，邊走邊吃。旁邊的國際市場藥妝店（韓一社藥局）營業到 21:00，是在地人都推薦的便宜藥局。市場內巷弄縱橫，建議跟著人潮走，找排隊的攤位準沒錯。</p>
+        <div class="must-try">
+          <p class="must-try-label">市場內必試</p>
+          <div class="must-try-grid">
+            <div class="must-try-item">
+              <p class="must-try-name">씨앗호떡 籽仁糖餅</p>
+              <p class="must-try-desc">富平市場名物，內餡是堅果和黑糖漿，外皮酥脆</p>
+            </div>
+            <div class="must-try-item">
+              <p class="must-try-name">유부전골 豆皮鍋</p>
+              <p class="must-try-desc">天冷時很適合，湯頭清爽，配料豐富</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <div class="planb">
+      <p class="planb-label">💡 備案：南浦延伸路線（還想多排景點，或沒搶到膠囊列車時用這條）</p>
+      <p>富平罐頭市場本身就在光復路商圈裡，這條延伸路線完全順路，不用走回頭路：</p>
+      <div class="must-try">
+        <div class="must-try-grid">
+          <div class="must-try-item">
+            <p class="must-try-name">📍 ept 南浦店</p>
+            <p class="must-try-desc">就在 ABC Mart 光復店隔壁，2026 年初才開幕，從富平市場走過去約 5–8 分鐘，順路逛一下</p>
+          </div>
+          <div class="must-try-item">
+            <p class="must-try-name">📍 ARTE MUSEUM</p>
+            <p class="must-try-desc">全球最大沉浸式光影美術館，評價 4.9 分，光影、聲音、香氣交織的展覽，建議預留 2–2.5 小時</p>
+          </div>
+        </div>
+      </div>
+      <p style="margin-top:0.6rem;">
+        <a class="map-btn-small" href="https://www.google.com/maps/search/?api=1&query=ABC+Mart+Gwangbok+Busan" target="_blank" rel="noopener">📍 ept／ABC Mart 開啟地圖導航</a>
+        <a class="map-btn-small" href="https://www.google.com/maps/search/?api=1&query=ARTE+MUSEUM+Busan" target="_blank" rel="noopener">📍 ARTE MUSEUM 開啟地圖導航</a>
+      </p>
+      <p>從南浦站搭公車約 25–30 分鐘到影島的 Arte Museum，逛完 ept 再過去最順。如果安排這整條延伸路線，下午回飯店的時間就要往後延，晚餐和廣安里的行程也要跟著往後挪 1–1.5 小時，記得抓鬆一點，不用硬塞。</p>
+    </div>
+
+    <div class="transport">
+      <p class="transport-label">🚕 南浦 → 海雲台（回程）</p>
+      <div class="transport-option">
+        <p class="transport-option-label">建議搭計程車</p>
+        <p>約 30 分鐘可達，車資約 ₩18,000–22,000（約台幣 430–525 元）。</p>
+      </div>
+      <div class="transport-option">
+        <p class="transport-option-label">大眾運輸（較省但較久）</p>
+        <p>南浦站搭地鐵 1 號線到西面站，轉 2 號線到海雲台站，全程約 50–60 分鐘，車資約 ₩1,800。</p>
+      </div>
+    </div>
+
+    <article class="event">
+      <div class="event-time">15:00</div>
+      <div class="event-body">
+        <h3>Davich 配眼鏡（海雲台店）<span class="duration">⏱ 約 1–2 小時</span></h3>
+        <a class="map-btn-small" href="https://www.google.com/maps/search/?api=1&query=DAVICH+Optical+Haeundae+Beach" target="_blank" rel="noopener">📍 開啟地圖導航</a>
+        <p class="tag-row"><span class="tag tag-green">⭐ 評價 5.0</span><span class="tag tag-gray">10:30–21:00</span></p>
+        <p>網路上很推薦的連鎖眼鏡行，海雲台這間有英文服務，驗光配鏡流程快的話 30 分鐘就好，保險起見可以抓 1–2 小時。離飯店很近，選好框架後可以先去飯店休息，等通知再回來拿。建議帶舊眼鏡或隱形眼鏡度數紀錄，驗光會更準確、更快。</p>
+        <div class="must-try">
+          <p class="must-try-label">配鏡小提醒</p>
+          <div class="must-try-grid">
+            <div class="must-try-item">
+              <p class="must-try-name">先驗光、後選框</p>
+              <p class="must-try-desc">店員會先幫忙測量度數，再依臉型推薦適合的鏡框款式</p>
+            </div>
+            <div class="must-try-item">
+              <p class="must-try-name">可刷卡、可退稅</p>
+              <p class="must-try-desc">消費滿額可現場辦理退稅，記得攜帶護照</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <div class="transport">
+      <p class="transport-label">🚕 海雲台午餐處 → Davich 眼鏡行</p>
+      <div class="transport-option">
+        <p class="transport-option-label">建議直接步行</p>
+        <p>在海雲台站周邊，跟飯店、Daiso、Olive Young 都在同一塊範圍，走路就能到，不用特地叫車。</p>
+      </div>
+    </div>
+
+    <article class="event">
+      <div class="event-time">16:30</div>
+      <div class="event-body">
+        <h3>回飯店休息，等眼鏡製作通知</h3>
+        <p>趁配鏡等待的空檔回飯店躺一下，悠閒步調剛剛好。眼鏡好了店家通常會通知，再走過去拿就好。</p>
+      </div>
+    </article>
+
+    <div class="transport">
+      <p class="transport-label">🚕 海雲台 → 廣安里海灘</p>
+      <div class="transport-option">
+        <p class="transport-option-label">建議搭計程車</p>
+        <p>約 20–25 分鐘可達，車資約 ₩13,000–16,000（過廣安大橋加收 ₩1,000 過橋費）。</p>
+      </div>
+      <div class="transport-option">
+        <p class="transport-option-label">大眾運輸（較省但較久）</p>
+        <p>海雲台站搭地鐵 2 號線到廣安站，全程約 35 分鐘，車資約 ₩1,800，出站後步行約 10 分鐘到海灘。</p>
+      </div>
+    </div>
+
+    <article class="event">
+      <div class="event-time">17:30</div>
+      <div class="event-body">
+        <h3>晚餐：石雞 Doldalg（廣安里店）<span class="duration">⏱ 約 1–1.5 小時</span></h3>
+        <a class="map-btn-small" href="https://www.google.com/maps/search/?api=1&query=Doldalg+Gwangalli+Busan" target="_blank" rel="noopener">📍 開啟地圖導航</a>
+        <p class="tag-row"><span class="tag tag-gray">16:00–22:00</span></p>
+        <p>石板大火翻烤的嫩雞肉，最後加蛋炒飯一起拌，是必點吃法。用燒得火紅的石板現場翻烤，肉質很嫩，醬料偏甜辣，兩人吃一份中份剛剛好。</p>
+        <div class="must-try">
+          <p class="must-try-label">店內必點</p>
+          <div class="must-try-grid">
+            <div class="must-try-item">
+              <p class="must-try-name">돌石板烤雞</p>
+              <p class="must-try-desc">招牌主菜，石板上現場翻烤，香氣十足</p>
+            </div>
+            <div class="must-try-item">
+              <p class="must-try-name">치즈볶음밥 起司炒飯</p>
+              <p class="must-try-desc">用烤雞剩下的醬汁加起司炒飯，是吃完主餐後的必點收尾</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <div class="planb">
+      <p class="planb-label">💡 備案</p>
+      <p>曹操刀切麵（廣安里店），海鮮蔥煎餅很適合兩人分食，11:00–22:00。</p>
+    </div>
+
+    <article class="event">
+      <div class="event-time">19:50</div>
+      <div class="event-body">
+        <h3>廣安里無人機秀（20:00 與 22:00）<span class="duration">⏱ 約 15 分鐘／場</span></h3>
+        <a class="map-btn-small" href="https://www.google.com/maps/search/?api=1&query=Gwangalli+Beach+Busan" target="_blank" rel="noopener">📍 開啟地圖導航</a>
+        <p class="tag-row"><span class="tag tag-red">限今晚週六</span></p>
+        <p>晚餐吃完石雞剛好走去海灘卡位，站在廣安里海灘中央 Starbucks 前方看最清楚，秀大約 15 分鐘，建議帶飲料提前佔好位置。無人機會排列出各種圖案搭配音樂，跟廣安大橋的燈光相互輝映，很值得耐心等待。看完 20:00 這場，如果還有體力也可以再等 22:00 那場。</p>
+        <div class="must-try">
+          <p class="must-try-label">觀賞小提醒</p>
+          <div class="must-try-grid">
+            <div class="must-try-item">
+              <p class="must-try-name">提前 30 分鐘到場</p>
+              <p class="must-try-desc">沙灘中央視野最好的位置容易被佔，建議提早卡位</p>
+            </div>
+            <div class="must-try-item">
+              <p class="must-try-name">帶野餐墊或折疊椅</p>
+              <p class="must-try-desc">沙灘久站會累，自備坐墊讓媽媽看秀更舒服</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <article class="event">
+      <div class="event-time">20:30</div>
+      <div class="event-body">
+        <h3>BRONI 海景咖啡廳　夜間散步<span class="duration">⏱ 約 1–1.5 小時</span></h3>
+        <a class="map-btn-small" href="https://www.google.com/maps/search/?api=1&query=BRONI+Cafe+Gwangalli+Busan" target="_blank" rel="noopener">📍 開啟地圖導航</a>
+        <p>看完 20:00 那場秀後，走去二樓吹冷氣看廣安大橋夜景，正對大橋的窗景很美，也能在這裡休息等 22:00 那場秀（想看的話出門走回沙灘就好，很近）。散步時可以順道逛 SCENTICA 香氛店（營業到 21:00）。晚上的廣安大橋會點燈，跟白天看到的景色完全不同，很適合悠閒散步收尾這一天。</p>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- ===== DAY 4 ===== -->
+<section class="day-pane" id="d4">
+  <div class="day-head">
+    <h2>8月16日（週日）</h2>
+    <p class="day-sub">X the SKY 高空景觀與 Club D Oasis 溫水療癒</p>
+    <p class="hotel-badge">🏨 住宿：東橫INN 海雲台</p>
+  </div>
+<div class="weather-box" id="weather-d4" data-date="2026-08-16"><span class="weather-icon">🌤️</span><span class="weather-loading">天氣資訊載入中…</span></div>
+
+
+  <div class="alert-box highlight">
+    ✨ 今天的重點：LCT 大樓一次滿足展望台＋溫水療癒，這也是醫美前最後一次可以泡溫泉的機會，好好享受一下。<br>
+    （原本排在這天的無人機秀其實是今晚 8/15 才對，已經挪到昨天晚上囉，今天可以慢慢玩不用趕。）
+  </div>
+
+  <p class="klook-tag">🎫 今天要用 Klook：釜山 X the SKY 展望台、Club D Oasis 門票</p>
+
+  <div class="timeline">
+    <article class="event">
+      <div class="event-time">10:00</div>
+      <div class="event-body">
+        <h3>釜山 X the SKY 展望台<span class="duration">⏱ 約 1–1.5 小時</span></h3>
+        <a class="map-btn-small" href="https://www.google.com/maps/search/?api=1&query=Busan+X+the+SKY" target="_blank" rel="noopener">📍 開啟地圖導航</a>
+        <p class="tag-row"><span class="tag tag-klook">Klook 預購</span></p>
+        <p>海雲台地標，100 樓可以俯瞰整條海岸線，還有全世界最高的星巴克。就在飯店旁邊，走路就到。建議先到 99 樓星巴克喝杯咖啡，再上 100 樓的展望台，視野是 360 度環景，晴天可以遠眺對馬島。</p>
+        <div class="must-try">
+          <p class="must-try-label">必拍亮點</p>
+          <div class="must-try-grid">
+            <div class="must-try-item">
+              <p class="must-try-name">玻璃景觀台</p>
+              <p class="must-try-desc">100樓的透明地板區，可以拍到很有張力的腳下視角照片</p>
+            </div>
+            <div class="must-try-item">
+              <p class="must-try-name">世界最高星巴克</p>
+              <p class="must-try-desc">99樓限定杯款值得收藏，喝咖啡同時欣賞海景</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <div class="transport">
+      <p class="transport-label">🚕 X the SKY → Club D Oasis</p>
+      <div class="transport-option">
+        <p class="transport-option-label">建議直接搭電梯</p>
+        <p>兩個設施在同一棟大樓（LCT），搭電梯轉換樓層即可，不需要走出大樓也不需要叫車。</p>
+      </div>
+    </div>
+
+    <article class="event">
+      <div class="event-time">12:30</div>
+      <div class="event-body">
+        <h3>Club D Oasis　水上樂園與露天溫泉<span class="duration">⏱ 約 3–4 小時</span></h3>
+        <a class="map-btn-small" href="https://www.google.com/maps/search/?api=1&query=Club+D+Oasis+Busan" target="_blank" rel="noopener">📍 開啟地圖導航</a>
+        <p class="tag-row"><span class="tag tag-klook">Klook 購票</span><span class="tag tag-amber">注意事項</span></p>
+        <p>跟展望台在同一棟大樓，不用移動。<strong>醫美前的溫馨提醒：不要進高溫乾蒸房</strong>，享受室內溫水按摩池、露天海景足湯、無邊際溫泉泳池就好，讓媽媽放鬆身心。記得帶泳衣，現場也有販售和租借，毛巾、置物櫃都包含在門票內。</p>
+        <div class="must-try">
+          <p class="must-try-label">推薦設施（避開乾蒸房）</p>
+          <div class="must-try-grid">
+            <div class="must-try-item">
+              <p class="must-try-name">無邊際溫泉泳池</p>
+              <p class="must-try-desc">面海而建，邊泡水邊看海景，是這裡最大亮點</p>
+            </div>
+            <div class="must-try-item">
+              <p class="must-try-name">露天海景足湯</p>
+              <p class="must-try-desc">不用全身泡水，坐著泡腳就能放鬆，溫度較溫和</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <div class="transport">
+      <p class="transport-label">🚕 Club D Oasis → 廣安里海灘</p>
+      <div class="transport-option">
+        <p class="transport-option-label">建議搭計程車</p>
+        <p>約 12 分鐘可達，車資約 ₩6,600–9,000（過廣安大橋加收 ₩1,000 過橋費）。</p>
+      </div>
+      <div class="transport-option">
+        <p class="transport-option-label">大眾運輸（較省但較久）</p>
+        <p>海雲台站搭地鐵 2 號線到廣安站，車程約 15 分鐘，車資約 ₩1,600。</p>
+      </div>
+      <p class="transport-tip">💡 小提醒：泡完水身體會比較疲累，建議直接搭計程車，比較不費力。</p>
+    </div>
+
+    <article class="event">
+      <div class="event-time">18:00</div>
+      <div class="event-body">
+        <h3>晚餐：All Sunday 貝果（廣安店）<span class="duration">⏱ 約 1 小時</span></h3>
+        <a class="map-btn-small" href="https://www.google.com/maps/search/?api=1&query=All+Sunday+Bagel+Gwangalli+Busan" target="_blank" rel="noopener">📍 開啟地圖導航</a>
+        <p class="tag-row"><span class="tag tag-gray">營業至 22:00</span></p>
+        <p>釜山 NO.1 排隊貝果，馬鈴薯起司與鹽巴口味配羅勒抹醬很特別。今天沒有無人機秀要趕，可以悠閒坐著慢慢吃，飯後再到附近走走看夜景。</p>
+        <div class="must-try">
+          <p class="must-try-label">必點口味</p>
+          <div class="must-try-grid">
+            <div class="must-try-item">
+              <p class="must-try-name">감자치즈 馬鈴薯起司貝果</p>
+              <p class="must-try-desc">招牌口味，內餡綿密，鹹香不膩</p>
+            </div>
+            <div class="must-try-item">
+              <p class="must-try-name">바질크림치즈 羅勒奶油起司</p>
+              <p class="must-try-desc">香草氣息明顯，口感清爽很適合配冰美式</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <div class="planb">
+      <p class="planb-label">💡 備案：想吃豐盛一點</p>
+      <p>三換畜產（中洞店）平價高質感的熟成三層肉；或五福家（오봉집）大盤香辣炒章魚配軟嫩包肉，都是在地人推薦。</p>
+    </div>
+
+    <article class="event">
+      <div class="event-time">19:30</div>
+      <div class="event-body">
+        <h3>廣安里海灘悠閒散步<span class="duration">⏱ 約 1 小時</span></h3>
+        <p>吃完貝果不用趕行程，沿著廣安里沙灘慢慢走，吹吹晚風看廣安大橋夜景就好。明天要移動到西面換飯店，後天就是醫美日，今晚可以早點回飯店休息，養精蓄銳。</p>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- ===== DAY 5 ===== -->
+<section class="day-pane" id="d5">
+  <div class="day-head">
+    <h2>8月17日（週一）</h2>
+    <p class="day-sub">移宿西面、室內冷氣商圈大採購</p>
+    <p class="hotel-badge">🏨 早上：東橫INN 海雲台 → 晚上：Urbanstay Seomyeon（西面站走路 3 分鐘）</p>
+  </div>
+<div class="weather-box" id="weather-d5" data-date="2026-08-17"><span class="weather-icon">🌤️</span><span class="weather-loading">天氣資訊載入中…</span></div>
+
+
+  <div class="timeline">
+    <article class="event">
+      <div class="event-time">早上</div>
+      <div class="event-body">
+        <h3>退房，前往西面 Urbanstay 飯店寄存行李</h3>
+        <p>東橫INN 退房時間通常是 10:00 或 11:00 前，記得前一晚先打包好行李，退房手續完成後再叫車前往西面。Urbanstay 入住時間若還沒到，可以先把行李寄放在櫃台，輕鬆出門逛街。</p>
+      </div>
+    </article>
+
+    <div class="transport">
+      <p class="transport-label">🚕 東橫INN 海雲台 → Urbanstay 西面</p>
+      <div class="transport-option">
+        <p class="transport-option-label">建議搭計程車</p>
+        <p>退房後直接搭車最省力，約 30 分鐘可達，車資約 ₩14,000–17,000（約台幣 335–405 元）。帶著行李移動，計程車是最不費力的選擇。</p>
+      </div>
+      <div class="transport-option">
+        <p class="transport-option-label">大眾運輸（較省但較久）</p>
+        <p>海雲台站搭地鐵 2 號線直達西面站，全程約 20 分鐘，車資約 ₩1,800。如果行李不多、想省錢，這個方式也算方便，西面站到 Urbanstay 走路只要 3 分鐘。</p>
+      </div>
+    </div>
+
+    <article class="event">
+      <div class="event-time">11:30</div>
+      <div class="event-body">
+        <h3>午餐：西面必吃大理石泡菜炒飯與手工切麵<span class="duration">⏱ 約 1–1.5 小時</span></h3>
+        <p>西面在地小吃的經典組合，大理石紋路的鐵板泡菜炒飯配上現點現做的手工切麵，是這一帶很受歡迎的平價選擇，兩道菜份量都不小，適合分食。</p>
+      </div>
+    </article>
+
+    <div class="transport">
+      <p class="transport-label">🚕 Urbanstay → 西面午餐處</p>
+      <div class="transport-option">
+        <p class="transport-option-label">建議直接步行</p>
+        <p>西面美食店家大多集中在地鐵站周邊，步行範圍內可以解決，不需要叫車。</p>
+      </div>
+    </div>
+
+    <article class="event">
+      <div class="event-time">13:00</div>
+      <div class="event-body">
+        <h3>大逛西面地下街、大創與 Olive Young<span class="duration">⏱ 約 3–4 小時</span></h3>
+        <p>都全天營業，完全在室內，可以好好吹冷氣兼防曬。西面地下街從地鐵站一路延伸，店家種類非常多，建議先逛 Olive Young 補貨保養品和彩妝，再去大創挑生活小物和伴手禮，最後在地下街慢慢挖寶服飾配件。</p>
+        <div class="must-try">
+          <p class="must-try-label">必逛重點</p>
+          <div class="must-try-grid">
+            <div class="must-try-item">
+              <p class="must-try-name">Olive Young 西面店</p>
+              <p class="must-try-desc">韓系美妝保養品最齊全，常有買就送活動</p>
+            </div>
+            <div class="must-try-item">
+              <p class="must-try-name">西面地下街服飾店</p>
+              <p class="must-try-desc">韓系流行服飾、配件密集，價格親民適合慢慢逛</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <div class="planb">
+      <p class="planb-label">💡 備案：想看更多服飾</p>
+      <p>WANNABE 西面店，超大的韓系流行女裝賣場，冷氣超強，營業到 22:30。</p>
+    </div>
+
+    <div class="transport">
+      <p class="transport-label">🚕 西面逛街處 → 晚餐餐廳</p>
+      <div class="transport-option">
+        <p class="transport-option-label">建議直接步行</p>
+        <p>三換畜產西面店也在西面商圈內，從地下街走過去約 5–10 分鐘，不需要叫車。</p>
+      </div>
+    </div>
+
+    <article class="event">
+      <div class="event-time">17:30</div>
+      <div class="event-body">
+        <h3>晚餐：三換畜產（西面店）<span class="duration">⏱ 約 1.5 小時</span></h3>
+        <a class="map-btn-small" href="https://www.google.com/maps/search/?api=1&query=Samhwan+Chuksan+Seomyeon+Busan" target="_blank" rel="noopener">📍 開啟地圖導航</a>
+        <p class="tag-row"><span class="tag tag-gray">16:00–24:00</span></p>
+        <p>厚切低溫熟成生三層肉，是這家連鎖店的西面總店。肉質經過熟成處理特別軟嫩多汁，店員會協助代烤，不用自己動手翻面。</p>
+        <div class="must-try">
+          <p class="must-try-label">店內必點</p>
+          <div class="must-try-grid">
+            <div class="must-try-item">
+              <p class="must-try-name">숙성삼겹살 熟成五花肉</p>
+              <p class="must-try-desc">招牌厚切豬五花，經過低溫熟成處理，入口即化</p>
+            </div>
+            <div class="must-try-item">
+              <p class="must-try-name">된장찌개 大醬湯</p>
+              <p class="must-try-desc">配烤肉一起吃的湯品，鹹香解膩，通常會附餐</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <div class="planb">
+      <p class="planb-label">💡 備案：想要有人代烤</p>
+      <p>Gohasun（고하순），田浦咖啡街的網美烤肉店，有親切的桌邊服務，完全不用自己動手，11:30–24:00。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== DAY 6 ===== -->
+<section class="day-pane" id="d6">
+  <div class="day-head medical-head">
+    <h2>8月18日（週二）</h2>
+    <p class="day-sub">早晨傳統市場、午後精準醫美</p>
+    <p class="medical-warning">❌ 從今天起開始全面防曬</p>
+    <p class="hotel-badge">🏨 住宿：Urbanstay Seomyeon</p>
+  </div>
+<div class="weather-box" id="weather-d6" data-date="2026-08-18"><span class="weather-icon">🌤️</span><span class="weather-loading">天氣資訊載入中…</span></div>
+
+
+  <div class="alert-box">
+    🌟 醫美後的超強防曬動線：療程結束後不出建築物到室外，直接走地下連通道進入新世界百貨，吹冷氣逛街、吃美食街晚餐。
+  </div>
+
+  <div class="timeline">
+    <article class="event">
+      <div class="event-time">09:00</div>
+      <div class="event-body">
+        <h3>釜田市場（Bujeon Market）<span class="duration">⏱ 1.5–2小時</span></h3>
+        <a class="map-btn-small" href="https://www.google.com/maps/search/?api=1&query=Bujeon+Market+Busan" target="_blank" rel="noopener">📍 開啟地圖導航</a>
+        <p>釜山最大在地傳統市場，肉餅（고기전）排隊必吃；現炒辣炒年糕、蒸籠包、各式乾貨</p>
+        <p class="tag-row"><span class="tag tag-green">早上人較少，最鮮</span></p>
+        <div class="must-try">
+          <p class="must-try-label">市場內必試</p>
+          <div class="must-try-grid">
+            <div class="must-try-item">
+              <p class="must-try-name">고기전 肉餅</p>
+              <p class="must-try-desc">釜田市場招牌，有排隊隊伍跟著走就對了</p>
+            </div>
+            <div class="must-try-item">
+              <p class="must-try-name">즉석떡볶이 現炒辣炒年糕</p>
+              <p class="must-try-desc">現場直接炒給你的 style，辣度可選</p>
+            </div>
+            <div class="must-try-item">
+              <p class="must-try-name">명란김밥 明太子蛋捲飯捲</p>
+              <p class="must-try-desc">明蘭紫菜飯捲招牌口味，08:00–16:00 限定供應</p>
+            </div>
+            <div class="must-try-item">
+              <p class="must-try-name">옛날어묵 古早味魚板</p>
+              <p class="must-try-desc">現炸現吃最美味，可以邊走邊吃當點心</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <div class="transport">
+      <p class="transport-label">🚕 海雲台飯店 → 釜田市場</p>
+      <div class="transport-option">
+        <p class="transport-option-label">地鐵：海雲台站(203) → 釜田站(120) 轉東海線</p>
+        <p>約 30 分，車資 ₩1,800</p>
+      </div>
+      <div class="transport-option">
+        <p class="transport-option-label">叫車：Kakao T 直達</p>
+        <p>約 25 分，車資 ₩14,000–17,000（帶行李建議叫車直接到）</p>
+      </div>
+    </div>
+
+    <div class="transport">
+      <p class="transport-label">🚕 釜田市場 → 醫美診所（Centum City）</p>
+      <div class="transport-option">
+        <p class="transport-option-label">建議搭地鐵</p>
+        <p>2 號線直達 Centum City 站，車程約 10–15 分鐘，車資約 ₩1,500，下車後步行幾分鐘即達診所，路線單純不易迷路。</p>
+      </div>
+      <div class="transport-option">
+        <p class="transport-option-label">大眾運輸以外的選擇</p>
+        <p>搭計程車約 15–20 分鐘，車資約 ₩8,000–11,000，市場逛完如果手上拿了戰利品，搭計程車會比較輕鬆。</p>
+      </div>
+      <p class="transport-tip">💡 小提醒：醫美預約是 15:00，建議市場逛到 11:30 左右就要動身，中間留時間吃午餐、回飯店放戰利品再出發。</p>
+    </div>
+
+    <article class="event medical-event" id="midam-clinic">
+      <div class="event-time">15:00</div>
+      <div class="event-body">
+        <h3>美潭醫院 Midam Clinic（미담의원）<span class="duration">⏱ 約 2–3 小時</span></h3>
+        <a class="map-btn-small" href="https://www.google.com/maps/search/?api=1&query=%EB%AF%B8%EB%8B%B4%EC%9D%98%EC%9B%90+Midam+Clinic+Centum" target="_blank" rel="noopener">📍 開啟地圖導航</a>
+        <p class="tag-row"><span class="tag tag-amber">⭐ 4.9（182 則評論）皮膚科</span><span class="tag tag-red">術後禁汗蒸幕、戶外日曬、大量流汗</span></p>
+        <p>地址（韓文）：부산 해운대구 센텀2로 19 센텀코아 2층，鄰近 BEXCO／新世代百貨。乃勻與惠祺兩人都已預約 15:00，術後不要急著出門，先在診所休息到狀態穩定再離開。建議當天穿著寬鬆好穿脫的衣服，並戴上帽子、口罩，方便療程結束後立刻防曬遮蔽。詳細事前問診資料與價目表整理在「💉 醫美情報」分頁。</p>
+        <div class="must-try">
+          <p class="must-try-label">術後立刻要做</p>
+          <div class="must-try-grid">
+            <div class="must-try-item">
+              <p class="must-try-name">戴帽子、口罩</p>
+              <p class="must-try-desc">走出診所前先做好防曬遮蔽，避免直接日曬</p>
+            </div>
+            <div class="must-try-item">
+              <p class="must-try-name">補水保濕</p>
+              <p class="must-try-desc">隨身帶保濕噴霧，療程後肌膚較敏感需要鎮定</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <div class="transport">
+      <p class="transport-label">🚕 診所 → 新世界百貨 Centum City</p>
+      <div class="transport-option">
+        <p class="transport-option-label">建議走地下連通道</p>
+        <p>診所所在大樓和百貨之間有地下連通道可以直接走過去，完全不用經過戶外，是醫美後最理想的防曬動線，幾乎不用花交通時間。</p>
+      </div>
+    </div>
+
+    <article class="event">
+      <div class="event-time">術後</div>
+      <div class="event-body">
+        <h3>新世界百貨 Centum City（地下連通道直接進入）<span class="duration">⏱ 約 2–3 小時</span></h3>
+        <a class="map-btn-small" href="https://www.google.com/maps/search/?api=1&query=Shinsegae+Centum+City+Busan" target="_blank" rel="noopener">📍 開啟地圖導航</a>
+        <p>完全不用走到室外，直接吹冷氣逛街，享用美食街晚餐。這裡是金氏世界紀錄認證全球最大百貨公司，美食街選擇多元，逛累了也有很多地方可以坐著休息。</p>
+        <div class="must-try">
+          <p class="must-try-label">術後友善行程</p>
+          <div class="must-try-grid">
+            <div class="must-try-item">
+              <p class="must-try-name">B1 美食街</p>
+              <p class="must-try-desc">完全室內用餐，不用擔心日曬，選擇也很多元</p>
+            </div>
+            <div class="must-try-item">
+              <p class="must-try-name">化妝品專櫃</p>
+              <p class="must-try-desc">可以順便補貨術後適合的舒緩保養品</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <div class="transport">
+      <p class="transport-label">🚕 Centum City → 西面（回 Urbanstay）</p>
+      <div class="transport-option">
+        <p class="transport-option-label">建議搭地鐵</p>
+        <p>Centum City 站搭 2 號線直達西面站，車程約 20 分鐘，車資約 ₩1,800，晚上人潮較少會比較舒適。</p>
+      </div>
+      <div class="transport-option">
+        <p class="transport-option-label">大眾運輸以外的選擇</p>
+        <p>搭計程車約 15–20 分鐘，車資約 ₩9,000–12,000，術後想避免人多擁擠的話可以選這個方式。</p>
+      </div>
+    </div>
+
+    <article class="event">
+      <div class="event-time">夜間</div>
+      <div class="event-body">
+        <h3>術後保養品補貨</h3>
+        <p>西面365藥局，西面最大、可退稅的深夜藥局；或西面짱藥局，一樣開到深夜 23:00，有很多術後修復用的保養品。兩間都在西面站附近，從 Urbanstay 走過去都很方便，店員會根據術後狀況推薦適合的修復產品。</p>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- ===== DAY 7 ===== -->
+<section class="day-pane" id="d7">
+  <div class="day-head medical-head">
+    <h2>8月19日（週三）</h2>
+    <p class="day-sub">田浦文青香氛與爆漿可頌之日</p>
+    <p class="medical-warning">全室內行程，術後第 2 天</p>
+    <p class="hotel-badge">🏨 住宿：Urbanstay Seomyeon</p>
+  </div>
+<div class="weather-box" id="weather-d7" data-date="2026-08-19"><span class="weather-icon">🌤️</span><span class="weather-loading">天氣資訊載入中…</span></div>
+
+
+  <div class="timeline">
+    <article class="event">
+      <div class="event-time">10:00</div>
+      <div class="event-body">
+        <h3>Strut Coffee<span class="duration">⏱ 約 1 小時</span></h3>
+        <a class="map-btn-small" href="https://www.google.com/maps/search/?api=1&query=Strut+Coffee+Busan" target="_blank" rel="noopener">📍 開啟地圖導航</a>
+        <p>連續三年被藍帶推薦的烘豆店，手沖咖啡很乾淨明亮，08:30–19:00。店內空間明亮舒適，適合術後悠閒坐著休息，吧台也能近距離看到咖啡師手沖的過程。</p>
+        <div class="must-try">
+          <p class="must-try-label">必點推薦</p>
+          <div class="must-try-grid">
+            <div class="must-try-item">
+              <p class="must-try-name">핸드드립 手沖單品咖啡</p>
+              <p class="must-try-desc">店家招牌，會依時令更換豆單，可請店員推薦</p>
+            </div>
+            <div class="must-try-item">
+              <p class="must-try-name">디카페인 低咖啡因選項</p>
+              <p class="must-try-desc">術後想避免刺激的話，這裡也有低咖啡因豆可選</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <div class="transport">
+      <p class="transport-label">🚕 Strut Coffee → 西面午餐處</p>
+      <div class="transport-option">
+        <p class="transport-option-label">建議直接步行</p>
+        <p>都在西面、田浦周邊，步行可達，不需要叫車，邊走邊逛剛好消化早上的咖啡時光。</p>
+      </div>
+    </div>
+
+    <article class="event">
+      <div class="event-time">12:00</div>
+      <div class="event-body">
+        <h3>午餐：西面 SOLSOT 釜飯<span class="duration">⏱ 約 1–1.5 小時</span></h3>
+        <a class="map-btn-small" href="https://www.google.com/maps/search/?api=1&query=SOLSOT+Seomyeon+Busan" target="_blank" rel="noopener">📍 開啟地圖導航</a>
+        <p>現燜頂級牛排釜飯與鮮甜鮑魚釜飯，很適合術後補身體，11:30–21:00。石鍋現燜上桌，鍋巴香氣十足，是溫補又不刺激的選擇，很適合醫美術後調養。</p>
+        <div class="must-try">
+          <p class="must-try-label">店內必點</p>
+          <div class="must-try-grid">
+            <div class="must-try-item">
+              <p class="must-try-name">전복돌솥밥 鮑魚石鍋飯</p>
+              <p class="must-try-desc">鮑魚鮮甜，搭配鍋巴一起吃口感豐富</p>
+            </div>
+            <div class="must-try-item">
+              <p class="must-try-name">한우돌솥밥 韓牛石鍋飯</p>
+              <p class="must-try-desc">牛肉軟嫩，湯品溫補很適合術後調養</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <div class="planb">
+      <p class="planb-label">💡 備案：想吃麵食</p>
+      <p>Bujebi（田浦海鮮麵疙瘩），排隊名店，11:30–21:00。</p>
+    </div>
+
+    <div class="transport">
+      <p class="transport-label">🚕 西面午餐處 → 田浦咖啡街</p>
+      <div class="transport-option">
+        <p class="transport-option-label">建議直接步行</p>
+        <p>田浦咖啡街就在西面隔壁，步行約 10–15 分鐘可達，沿路都是小店適合慢慢逛過去。</p>
+      </div>
+    </div>
+
+    <article class="event">
+      <div class="event-time">13:30</div>
+      <div class="event-body">
+        <h3>田浦香氛與精緻點心（全室內）<span class="duration">⏱ 約 2–3 小時</span></h3>
+        <p>Youssoful 香水店挑選高質感香水（11:00–21:00）；下午茶到 La Feuille 可頌專賣店，吃爆漿抹茶可頌（營業到 22:30）。田浦咖啡街一帶店家密集，且大多是室內空間，很適合術後第二天悠閒探索，不會曬到太陽。</p>
+        <div class="must-try">
+          <p class="must-try-label">必逛必吃</p>
+          <div class="must-try-grid">
+            <div class="must-try-item">
+              <p class="must-try-name">Youssoful 香水體驗</p>
+              <p class="must-try-desc">可以試聞調配，找到屬於自己的氣味紀念品</p>
+            </div>
+            <div class="must-try-item">
+              <p class="must-try-name">말차크로플 抹茶可頌</p>
+              <p class="must-try-desc">La Feuille 招牌，外皮酥脆內餡爆漿，是排隊甜點</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <div class="planb">
+      <p class="planb-label">💡 備案：奢華孝親選項</p>
+      <p>Gungseochae Seomyeon 髮廊，5 星滿分好評，正宗韓系深層護髮或頭皮 SPA，營業到 20:00，讓媽媽坐著吹冷氣放鬆。</p>
+    </div>
+
+    <div class="transport">
+      <p class="transport-label">🚕 田浦咖啡街 → 晚餐處</p>
+      <div class="transport-option">
+        <p class="transport-option-label">建議直接步行</p>
+        <p>PURADAK 炸雞田浦店就在附近，走回西面的路上就能順道外帶，不需要叫車。</p>
+      </div>
+    </div>
+
+    <article class="event">
+      <div class="event-time">晚餐</div>
+      <div class="event-body">
+        <h3>PURADAK 炸雞 西面田浦店<span class="duration">⏱ 約 1 小時</span></h3>
+        <a class="map-btn-small" href="https://www.google.com/maps/search/?api=1&query=Puradak+Chicken+Jeonpo+Busan" target="_blank" rel="noopener">📍 開啟地圖導航</a>
+        <p>提回飯店外帶吹冷氣最方便，最後一夜輕鬆收尾。釜山連鎖人氣炸雞品牌，外皮酥脆不死鹹，搭配特調醬料風味很有層次。</p>
+        <div class="must-try">
+          <p class="must-try-label">必點口味</p>
+          <div class="must-try-grid">
+            <div class="must-try-item">
+              <p class="must-try-name">블랙갈릭 黑蒜炸雞</p>
+              <p class="must-try-desc">招牌口味，蒜香濃郁不刺激，是術後也能安心吃的選擇</p>
+            </div>
+            <div class="must-try-item">
+              <p class="must-try-name">고추마요 辣椒美乃滋</p>
+              <p class="must-try-desc">微辣帶酸甜，沾醬風味很特別</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <article class="event">
+      <div class="event-time">21:00</div>
+      <div class="event-body">
+        <h3>打包行李，明早 06:30 出發</h3>
+        <p>記得把退稅單整理好，並先用 Kakao T 設定隔天的叫車時間。可以順便確認護照、機票電子憑證、飯店訂房確認信都還在手機裡，避免明早匆忙找不到。</p>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- ===== DAY 8 ===== -->
+<section class="day-pane" id="d8">
+  <div class="day-head">
+    <h2>8月20日（週四）</h2>
+    <p class="day-sub">帶著透亮肌膚輕鬆返台</p>
+    <p class="hotel-badge">✈️ 金海機場 09:00 起飛 → 桃園機場 10:30 抵達</p>
+  </div>
+<div class="weather-box" id="weather-d8" data-date="2026-08-20"><span class="weather-icon">🌤️</span><span class="weather-loading">天氣資訊載入中…</span></div>
+
+
+  <div class="alert-box">⏰ 班機是早上 09:00，記得清晨 06:30 就要辦理退房出發喔！</div>
+
+  <div class="timeline">
+    <article class="event">
+      <div class="event-time">06:30</div>
+      <div class="event-body">
+        <h3>辦理退房，搭計程車直達金海機場</h3>
+        <p>Urbanstay 多半提供自助退房，前一晚記得問清楚流程。退房前再次確認房間有沒有遺留物品，特別是充電器和購物戰利品。</p>
+      </div>
+    </article>
+
+    <div class="transport">
+      <p class="transport-label">🚕 Urbanstay Seomyeon → 金海國際機場</p>
+      <div class="transport-option">
+        <p class="transport-option-label">建議搭計程車</p>
+        <p>直達約 35–40 分鐘，車資約 ₩17,000–20,000（約台幣 405–480 元）。一早行李多，搭計程車最不費力，也比較不用擔心錯過班機。</p>
+      </div>
+      <div class="transport-option">
+        <p class="transport-option-label">大眾運輸（較省但較久）</p>
+        <p>西面站搭地鐵轉乘金海輕軌，全程約 50–60 分鐘，車資約 ₩1,800，但一早班次較少，且轉乘搬行李會比較辛苦。</p>
+      </div>
+      <p class="transport-tip">💡 小提醒：建議前一晚先用 Kakao T 預約隔天早上的車，避免臨時叫不到車耽誤班機。</p>
+    </div>
+
+    <article class="event">
+      <div class="event-time">07:30</div>
+      <div class="event-body">
+        <h3>辦理登機與電子退稅</h3>
+        <p>二樓出境大廳 Gate 4 旁有自助退稅機，掃描護照和退稅單；通關後在三樓 NICE TAX FREE 櫃台領現金。退稅金額不大的話現場排隊人不多，但建議還是預留 30 分鐘左右的緩衝時間。</p>
+      </div>
+    </article>
+
+    <article class="event">
+      <div class="event-time">09:00</div>
+      <div class="event-body">
+        <h3>順利起飛返台</h3>
+        <p>抵達桃園 10:30，帶著美麗的肌膚和滿滿的回憶回家！</p>
+      </div>
+    </article>
+  </div>
+</section>
+
+</div>
+<!-- ════════════════ 主分頁一結束：每日行程 ════════════════ -->
+
+
+<!-- ════════════════ 主分頁二：訂房與機票資訊 ════════════════ -->
+<div class="main-pane" id="booking">
+
+  <h2 class="pane-title">✈️ 機票與住宿資訊</h2>
+
+  <div class="info-card emergency-card">
+    <h3 class="info-card-title">🆘 緊急聯絡資訊</h3>
+    <p class="note-desc" style="margin-bottom:0.75rem;">遇到任何緊急狀況，先別慌，照下面的電話打就對了。</p>
+    <table class="info-table">
+      <tr><td>駐韓國台北代表部</td><td><a class="phone-link" href="tel:+82221007700">+82-2-2100-7700</a></td></tr>
+      <tr><td>緊急聯絡（夜間/假日）</td><td><a class="phone-link" href="tel:+821089329135">+82-10-8932-9135</a></td></tr>
+      <tr><td>韓國報警</td><td><a class="phone-link" href="tel:112">112</a></td></tr>
+      <tr><td>韓國救護車／消防</td><td><a class="phone-link" href="tel:119">119</a></td></tr>
+      <tr><td>外交部旅外國人急難救助</td><td><a class="phone-link" href="tel:0800085095">0800-085-095（台灣境內）</a></td></tr>
+      <tr><td>海外緊急聯絡（國際付費）</td><td><a class="phone-link" href="tel:+886800085095">+886-800-085-095</a></td></tr>
+    </table>
+    <p class="checklist-label">信用卡掛失</p>
+    <ul class="checklist">
+      <li>台新銀行 24 小時客服：<a class="phone-link" href="tel:+886225887999">+886-2-2588-7999</a></li>
+      <li>遺失護照：先報案拿報案三聯單，再到駐韓國台北代表部申請補發</li>
+    </ul>
+  </div>
+
+  <div class="info-card">
+    <h3 class="info-card-title">🛫 去程機票</h3>
+    <table class="info-table">
+      <tr><td>航班</td><td>虎航 IT606</td></tr>
+      <tr><td>航線</td><td>桃園 TPE → 金海 PUS</td></tr>
+      <tr><td>日期時間</td><td>8/13（四）16:40 起飛 → 19:55 抵達</td></tr>
+      <tr><td>航廈</td><td>桃園機場 第一航廈</td></tr>
+      <tr><td>行李</td><td>共 2 件隨身，另加購 25 公斤託運</td></tr>
+      <tr><td>訂位代號</td><td>FE33HE</td></tr>
+    </table>
+  </div>
+
+  <div class="info-card">
+    <h3 class="info-card-title">🛬 回程機票</h3>
+    <table class="info-table">
+      <tr><td>航班</td><td>Korean Air</td></tr>
+      <tr><td>航線</td><td>金海 PUS → 桃園 TPE</td></tr>
+      <tr><td>日期時間</td><td>8/20（四）9:00 起飛 → 10:30 抵達</td></tr>
+      <tr><td>航廈</td><td>I 航廈（International）</td></tr>
+      <tr><td>行李</td><td>共 2 件隨身，2 件託運</td></tr>
+      <tr><td>票號</td><td>1802356982450</td></tr>
+      <tr><td>訂位代號</td><td>FB6VNX</td></tr>
+    </table>
+  </div>
+
+  <div class="info-card">
+    <h3 class="info-card-title">🏨 住宿一：東橫INN 海雲台2號店</h3>
+    <p class="info-card-en">Toyoko Inn Busan Haeundae 2</p>
+    <table class="info-table">
+      <tr><td>入住</td><td>8/13（四）15:00 起</td></tr>
+      <tr><td>退房</td><td>8/17（一）10:00 前</td></tr>
+      <tr><td>天數</td><td>4 晚，雙床房（無停車位）</td></tr>
+      <tr><td>金額</td><td>₩10,959（信用卡：台新玫瑰卡）</td></tr>
+      <tr><td>確認碼</td><td>6394127016</td></tr>
+    </table>
+    <a class="map-btn" href="https://maps.app.goo.gl/P3ftZwSvD2V8FiCH8" target="_blank" rel="noopener">📍 在地圖上開啟飯店位置</a>
+  </div>
+
+  <div class="info-card">
+    <h3 class="info-card-title">🏨 住宿二：西面城市住宿飯店</h3>
+    <p class="info-card-en">Urbanstay Seomyeon</p>
+    <table class="info-table">
+      <tr><td>入住</td><td>8/17（一）16:00 後</td></tr>
+      <tr><td>退房</td><td>8/20（四）11:00 前</td></tr>
+      <tr><td>天數</td><td>3 晚，單室套房（兩床）</td></tr>
+      <tr><td>金額</td><td>₩6,903（信用卡：台新玫瑰卡）</td></tr>
+      <tr><td>狀態</td><td>已預訂，已付款</td></tr>
+    </table>
+    <a class="map-btn" href="https://maps.app.goo.gl/dG1UDrtSkoYo4gpr6" target="_blank" rel="noopener">📍 在地圖上開啟飯店位置</a>
+  </div>
+
+</div>
+<!-- ════════════════ 主分頁二結束 ════════════════ -->
+
+
+<!-- ════════════════ 主分頁三：認識釜山 ════════════════ -->
+<div class="main-pane" id="about">
+
+  <h2 class="pane-title">🌊 認識釜山</h2>
+
+  <nav class="subtabs" id="subtabs-about">
+    <button class="sub-tab active" data-sub="about-intro">城市介紹</button>
+    <button class="sub-tab" data-sub="about-food">在地美食</button>
+    <button class="sub-tab" data-sub="about-east">東區景點</button>
+    <button class="sub-tab" data-sub="about-west">西區景點</button>
+    <button class="sub-tab" data-sub="about-seomyeon">西面區景點</button>
+  </nav>
+
+  <div class="sub-pane active" id="about-intro">
+    <div class="hero-card">
+      <h3>🇰🇷 釜山 Busan</h3>
+      <p>南韓第二大都市與最大港口，以依山傍海的景觀、豐富海鮮、物價實惠的度假氛圍聞名。釜山人個性直率，擁有不同於首爾的獨特海洋城市風情。</p>
+      <div class="chip-row">
+        <span class="chip">⏰ 比台灣快 1 小時</span>
+        <span class="chip">🌡 8月均溫 25–33°C</span>
+        <span class="chip">💰 物價約便宜 2–3 成</span>
+        <span class="chip">🌊 依山傍海</span>
+      </div>
+    </div>
+
+    <h3 class="section-title">🗺 釜山六大區域</h3>
+    <div class="area-grid">
+      <div class="area-card" style="border-left-color:#1D9E75;">
+        <p class="area-name">海雲台 🏖</p>
+        <p class="area-desc">最知名的海水浴場，膠囊列車、X the Sky 都在此，8/13–8/17 我們住這！</p>
+      </div>
+      <div class="area-card" style="border-left-color:#378ADD;">
+        <p class="area-name">西面 🏙</p>
+        <p class="area-desc">釜山最大商圈，地下商街、Olive Young 都在這，8/17–8/20 我們住這！</p>
+      </div>
+      <div class="area-card" style="border-left-color:#7F77DD;">
+        <p class="area-name">廣安里 🌉</p>
+        <p class="area-desc">廣安大橋夜景、海灘咖啡廳、無人機秀（限週六），比海雲台更悠閒</p>
+      </div>
+      <div class="area-card" style="border-left-color:#D85A30;">
+        <p class="area-name">松島 🚡</p>
+        <p class="area-desc">韓國第一條海上纜車所在地，景色絕美</p>
+      </div>
+      <div class="area-card" style="border-left-color:#BA7517;">
+        <p class="area-name">機張 🦀</p>
+        <p class="area-desc">海東龍宮寺、機張螃蟹市場都在此</p>
+      </div>
+      <div class="area-card" style="border-left-color:#888780;">
+        <p class="area-name">南浦洞 🛍</p>
+        <p class="area-desc">傳統文化與現代購物並存，與西面並列兩大商圈</p>
+      </div>
+    </div>
+
+    <h3 class="section-title">☕ 韓國咖啡文化</h3>
+    <div class="info-card">
+      <p class="note-title">把咖啡當水喝</p>
+      <p class="note-desc">韓國人一年平均喝超過 360 杯咖啡！冰美式是國民飲品，有句話叫「凍死也要喝冰美式」。</p>
+      <p class="note-title" style="margin-top:1rem;">飯後「續攤」文化</p>
+      <p class="note-desc">韓國餐廳通常不適合久坐，吃飽後轉戰咖啡廳聊天是標準社交習慣。</p>
+    </div>
+
+    <h3 class="section-title">🏪 三大超商特色</h3>
+    <div class="info-card">
+      <p class="note-title">🟠 CU（市佔率第一）</p>
+      <p class="note-desc">高品質甜點、精緻便當聞名，機場退稅後掃貨首選。</p>
+      <p class="note-title" style="margin-top:1rem;">🟢 GS25（設計最潮）</p>
+      <p class="note-desc">年輕品牌形象，熱門聯名商品多。</p>
+      <p class="note-title" style="margin-top:1rem;">🔴 7-Eleven（微波食品最好吃）</p>
+      <p class="note-desc">韓國最早的便利商店，熱食被認為三者中最美味。</p>
+    </div>
+  </div>
+
+  <div class="sub-pane" id="about-food">
+    <h3 class="section-title">釜山必吃正餐</h3>
+    <div class="food-grid">
+      <div class="food-card"><p class="food-emoji">🍲</p><p class="food-name">豬肉湯飯</p><p class="food-desc">韓戰時期產物，豬骨熬煮濃湯拌白飯，24小時供應</p></div>
+      <div class="food-card"><p class="food-emoji">🥩</p><p class="food-name">韓國烤肉</p><p class="food-desc">生菜包肉＋桌邊服務，配燒酒是標準吃法</p></div>
+      <div class="food-card"><p class="food-emoji">🐄</p><p class="food-name">韓牛</p><p class="food-desc">細膩油花、入口即化，서면소갈비살是行程首選</p></div>
+      <div class="food-card"><p class="food-emoji">🌀</p><p class="food-name">烤腸</p><p class="food-desc">牛小腸或豬大腸炭烤，口感富嚼勁</p></div>
+      <div class="food-card"><p class="food-emoji">🍜</p><p class="food-name">海鮮刀削麵</p><p class="food-desc">蛤蜊＋淡菜＋扇貝大碗公，31cm 刀切麵熱門推薦</p></div>
+      <div class="food-card"><p class="food-emoji">🍜</p><p class="food-name">釜山小麥冷麵</p><p class="food-desc">口感Q彈不易斷，清甜冰高湯消暑</p></div>
+      <div class="food-card"><p class="food-emoji">🐙</p><p class="food-name">辣炒章魚</p><p class="food-desc">螞蟻家最知名，廣安里店可配大橋夜景</p></div>
+      <div class="food-card"><p class="food-emoji">🦪</p><p class="food-name">鮑魚粥</p><p class="food-desc">深綠色濃稠風味，高營養滋補暖胃</p></div>
+    </div>
+
+    <h3 class="section-title">街頭小食</h3>
+    <div class="food-grid">
+      <div class="food-card"><p class="food-emoji">🥘</p><p class="food-name">釜山辣炒年糕</p><p class="food-desc">白蘿蔔絲汁液熬煮，口感Q彈甜辣</p></div>
+      <div class="food-card"><p class="food-emoji">🥞</p><p class="food-name">海鮮煎餅</p><p class="food-desc">蔥＋海鮮＋麵粉，廣安里最有氣氛</p></div>
+      <div class="food-card"><p class="food-emoji">🍩</p><p class="food-name">釜山堅果糖餅</p><p class="food-desc">南浦洞元祖糖餅排隊名店</p></div>
+      <div class="food-card"><p class="food-emoji">⚫</p><p class="food-name">血腸</p><p class="food-desc">沾調味鹽或蝦醬食用，市場常見</p></div>
+      <div class="food-card"><p class="food-emoji">🍗</p><p class="food-name">韓式炸雞</p><p class="food-desc">Puradak 黑蒜口味是行程主角</p></div>
+      <div class="food-card"><p class="food-emoji">🥚</p><p class="food-name">烤雞蛋</p><p class="food-desc">汗蒸幕必吃儀式感，搭配甜米露</p></div>
+    </div>
+
+    <h3 class="section-title">飲料文化</h3>
+    <div class="food-grid">
+      <div class="food-card"><p class="food-emoji">🍶</p><p class="food-name">燒酒</p><p class="food-desc">綠瓶、順口不辣喉，炸雞烤肉最佳搭檔</p></div>
+      <div class="food-card"><p class="food-emoji">🥛</p><p class="food-name">馬格麗</p><p class="food-desc">乳白色甘甜微氣泡傳統濁米酒</p></div>
+      <div class="food-card"><p class="food-emoji">🍌</p><p class="food-name">香蕉牛奶</p><p class="food-desc">韓國人從小喝到大的國民飲品</p></div>
+      <div class="food-card"><p class="food-emoji">☕</p><p class="food-name">冰美式</p><p class="food-desc">「凍死也要喝冰美式」國民飲品</p></div>
+    </div>
+  </div>
+
+  <div class="sub-pane" id="about-east">
+    <p class="sub-pane-note">包含海雲台、廣安里、機張區域 — 8/13–8/17 主要活動範圍</p>
+
+    <div class="att-card">
+      <h3 class="att-name">🚂 海雲台藍線公園 膠囊列車</h3>
+      <p class="att-desc">行經海雲台尾浦→青沙浦兩站，從 7–10 公尺高空欣賞大海美景的浪漫彩色列車。每節車廂 4 人座，全程約 30–40 分鐘。</p>
+      <p class="tag-row"><span class="tag tag-red">務必 2 週前預購！</span><span class="tag tag-blue">⏱ 含散步 2–3 小時</span></p>
+      <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=Haeundae+Blueline+Park+Mipo+Station" target="_blank" rel="noopener">📍 開啟地圖導航</a>
+    </div>
+
+    <div class="att-card">
+      <h3 class="att-name">🏙 X the Sky 展望台</h3>
+      <p class="att-desc">釜山最高觀景台，360度俯瞰海雲台海岸線，世界最高 Starbucks 在 99 樓。</p>
+      <p class="tag-row"><span class="tag tag-blue">⏱ 1–1.5 小時</span><span class="tag tag-amber">💡 Klook 預購省排隊</span></p>
+      <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=Busan+X+the+SKY" target="_blank" rel="noopener">📍 開啟地圖導航</a>
+    </div>
+
+    <div class="att-card">
+      <h3 class="att-name">🛷 Skyline Luge 斜坡滑車</h3>
+      <p class="att-desc">紐西蘭品牌，搭空中吊椅上山再駕駛無動力滑車滑下，有山側和海側景觀可選。</p>
+      <p class="tag-row"><span class="tag tag-blue">⏱ 2 次約 1–1.5 小時</span><span class="tag tag-green">💡 龍宮寺→滑車下坡步行 12 分鐘</span></p>
+      <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=Skyline+Luge+Busan" target="_blank" rel="noopener">📍 開啟地圖導航</a>
+    </div>
+
+    <div class="att-card">
+      <h3 class="att-name">🏛 海東龍宮寺</h3>
+      <p class="att-desc">韓國唯一一座建於海邊礁岩上的寺廟，被譽為「韓國最美寺廟」，韓國三大觀音聖地之一。</p>
+      <p class="tag-row"><span class="tag tag-blue">⏱ 1–1.5 小時</span><span class="tag tag-red">⚠ 有上坡路段，建議叫車</span></p>
+      <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=Haedong+Yonggungsa+Temple" target="_blank" rel="noopener">📍 開啟地圖導航</a>
+    </div>
+
+    <div class="att-card">
+      <h3 class="att-name">🚁 廣安里無人機秀</h3>
+      <p class="att-desc">約 300 台無人機在廣安大橋上空變幻圖案，配合音樂演出，約 15 分鐘。站在 Starbucks 廣安里店正前方沙灘中央視角最佳。</p>
+      <p class="tag-row"><span class="tag tag-red">🔴 限每週六 20:00 & 22:00</span><span class="tag tag-amber">我們在 8/15 安排</span></p>
+      <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=Gwangalli+Beach" target="_blank" rel="noopener">📍 開啟地圖導航</a>
+    </div>
+  </div>
+
+  <div class="sub-pane" id="about-west">
+    <p class="sub-pane-note">包含松島、南浦洞區域 — 8/15、8/16 主要活動範圍</p>
+
+    <div class="att-card">
+      <h3 class="att-name">🚡 松島海上纜車</h3>
+      <p class="att-desc">韓國第一條海上纜車，全長 1.62 公里，可在 86 公尺高空俯瞰松島灣。水晶車廂地板透明，腳下直接是海。</p>
+      <p class="tag-row"><span class="tag tag-blue">⏱ 含雲步道 2 小時</span><span class="tag tag-green">💡 不需預約，現場換票</span></p>
+      <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=Songdo+Sea+Cable+Car+Busan" target="_blank" rel="noopener">📍 開啟地圖導航</a>
+    </div>
+
+    <div class="att-card">
+      <h3 class="att-name">☁️ 松島雲步道</h3>
+      <p class="att-desc">沿著懸崖建造的海景步道，免費入場，可近距離看纜車從頭頂飛過，日落時超美。</p>
+      <p class="tag-row"><span class="tag tag-green">免費</span><span class="tag tag-blue">⏱ 30–45 分鐘</span></p>
+      <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=Songdo+Cloud+Trail+Busan" target="_blank" rel="noopener">📍 開啟地圖導航</a>
+    </div>
+
+    <div class="att-card">
+      <h3 class="att-name">🏬 新世界百貨 Centum City</h3>
+      <p class="att-desc">世界最大百貨公司，精品、美妝、餐廳、溜冰場一應俱全，有退稅服務。醫美後可從地下連通道直接進入。</p>
+      <p class="tag-row"><span class="tag tag-blue">⏱ 2–3 小時</span><span class="tag tag-amber">💡 醫美後最佳動線</span></p>
+      <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=Shinsegae+Centum+City+Busan" target="_blank" rel="noopener">📍 開啟地圖導航</a>
+    </div>
+  </div>
+
+  <div class="sub-pane" id="about-seomyeon">
+    <p class="sub-pane-note">8/17–8/20 住宿區域，醫美後室內活動為主</p>
+
+    <div class="att-card">
+      <h3 class="att-name">🛍 西面地下商街</h3>
+      <p class="att-desc">釜山最大地下購物街，完全室內有冷氣，服飾、飾品、美妝應有盡有。</p>
+      <p class="tag-row"><span class="tag tag-blue">⏱ 1–2 小時</span><span class="tag tag-gray">🕓 10:00–22:00</span></p>
+      <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=Seomyeon+Underground+Shopping+Center" target="_blank" rel="noopener">📍 開啟地圖導航</a>
+    </div>
+
+    <div class="att-card">
+      <h3 class="att-name">☕ 全浦咖啡街</h3>
+      <p class="att-desc">特色獨立咖啡廳聚集地，和 Youssoful 香水店在同一區域，適合悠閒下午茶。</p>
+      <p class="tag-row"><span class="tag tag-blue">⏱ 1–1.5 小時</span></p>
+      <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=Jeonpo+Cafe+Street+Busan" target="_blank" rel="noopener">📍 開啟地圖導航</a>
+    </div>
+
+    <div class="att-card">
+      <h3 class="att-name">🛒 釜田市場</h3>
+      <p class="att-desc">釜山最大在地傳統市場，肉餅有排隊隊伍跟著走就對了，現炒辣炒年糕也很推薦。</p>
+      <p class="tag-row"><span class="tag tag-blue">⏱ 1.5–2 小時</span><span class="tag tag-gray">🕓 04:00–19:00</span></p>
+      <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=Bujeon+Market+Busan" target="_blank" rel="noopener">📍 開啟地圖導航</a>
+    </div>
+
+    <div class="att-card">
+      <h3 class="att-name">🌸 Youssoful 香水店</h3>
+      <p class="att-desc">韓國獨特高質感香水品牌，提供試香服務，在台灣買不到。</p>
+      <p class="tag-row"><span class="tag tag-blue">⏱ 45–60 分鐘</span><span class="tag tag-gray">🕓 11:00–21:00</span></p>
+      <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=Youssoful+Jeonpo+Busan" target="_blank" rel="noopener">📍 開啟地圖導航</a>
+    </div>
+  </div>
+
+</div>
+<!-- ════════════════ 主分頁三結束 ════════════════ -->
+
+
+<!-- ════════════════ 主分頁四：旅遊錦囊 ════════════════ -->
+<div class="main-pane" id="guide">
+
+  <h2 class="pane-title">🧳 旅遊錦囊</h2>
+
+  <div class="info-card">
+    <h3 class="info-card-title">📋 出發前必做 Checklist</h3>
+    <p class="checklist-label">證件與申請</p>
+    <ul class="checklist">
+      <li>✅ 護照正本效期 6 個月以上</li>
+      <li>✅ e-Arrival Card 電子入境卡，入境前 72 小時內填寫，截圖 QR Code 備用</li>
+      <li>✅ SeS 自動通關申請，可大幅縮短回台入境時間</li>
+    </ul>
+    <p class="checklist-label">行前購票（越早越好）</p>
+    <ul class="checklist">
+      <li>🎫 Sky Capsule 膠囊列車：至少 2 週前購，8 月旺季常售罄 <span class="tag tag-red">最緊急</span></li>
+      <li>🎫 釜山 Pass Big 5：Klook 數位版約 NT$1,400，可省約 NT$900</li>
+      <li>🎫 X the Sky 展望台：Klook 現場換票省排隊</li>
+      <li>🎫 Skyline Luge 斜坡滑車：Pass 含 2 次</li>
+      <li>🎫 松島海上纜車：Pass 含水晶車廂來回</li>
+    </ul>
+    <p class="checklist-label">App 設定（在台灣先完成）</p>
+    <ul class="checklist">
+      <li>📱 Kakao T：先完成手機驗證＋綁信用卡 <span class="tag tag-red">必設定</span></li>
+      <li>📱 Naver Map：韓國導航比 Google Map 準確</li>
+      <li>📱 Papago：翻譯比 Google 翻譯準確</li>
+      <li>📱 Uber：備用叫車，可跟 Kakao T 比價</li>
+    </ul>
+    <p class="checklist-label">行李準備</p>
+    <ul class="checklist">
+      <li>🔌 220V 圓形兩孔轉接頭 4.8mm 細腳 <span class="tag tag-red">和台灣不同！</span></li>
+      <li>🔋 行動電源 100Wh 以下，必須隨身登機</li>
+      <li>🧴 個人藥物先確認成分是否為韓國管制藥品</li>
+      <li>☀️ 防曬品準備 2 支以上，醫美後更需要</li>
+      <li>💳 確認信用卡開通海外刷卡，市場小吃多收現金</li>
+    </ul>
+  </div>
+
+  <div class="info-card">
+    <h3 class="info-card-title">🎟 釜山 Pass Big 5 建議配置</h3>
+    <table class="info-table">
+      <tr><td>松島海上纜車</td><td>原價約 ₩24,000</td></tr>
+      <tr><td>斜坡滑車 2 次</td><td>原價約 ₩27,000</td></tr>
+      <tr><td>X the Sky 展望台</td><td>原價約 ₩22,000</td></tr>
+      <tr><td>松島龍宮雲步道</td><td>原價 ₩1,000（Pass 內含）</td></tr>
+      <tr><td>海岸列車／膠囊列車</td><td>膠囊需另外線上預購</td></tr>
+    </table>
+    <p class="note-desc">合計原價約 NT$2,300，Big 5 Pass 約 NT$1,400，省約 NT$900。出示 Klook 手機 QR Code 現場兌換即可。</p>
+  </div>
+
+  <div class="info-card">
+    <h3 class="info-card-title">🧾 購物退稅完整流程</h3>
+    <p class="note-desc"><strong>資格：</strong>單筆消費滿 ₩15,000 以上可辦理，實際退回約 4–7%。</p>
+    <p class="checklist-label">購物當下</p>
+    <p class="note-desc">結帳時主動出示護照，索取退稅單，建議選「機場退稅」最穩妥。</p>
+    <p class="checklist-label">8/20 機場辦理流程</p>
+    <ul class="checklist">
+      <li>① 二樓出境大廳 Gate 4 旁，自助電子退稅機掃描護照＋退稅單</li>
+      <li>② 顯示「O」直接通關；顯示「X」需到「稅關申告」櫃檯蓋章</li>
+      <li>③ 通關後三樓 4 號登機口對面，「NICE TAX FREE」櫃台領現金（建議選韓幣）</li>
+    </ul>
+    <p class="note-desc">⚠️ 市區機台退稅會預刷 1.1 倍金額作保證金，離境前仍須在機場再掃一次才算完成。</p>
+  </div>
+
+  <div class="info-card medical-card">
+    <h3 class="info-card-title">💉 醫美後完整注意事項（8/18 起）</h3>
+    <p class="checklist-label">絕對禁止</p>
+    <p class="note-desc">汗蒸幕、三溫暖、長時間日曬、戶外劇烈運動、大量出汗。</p>
+    <p class="checklist-label">術後必做</p>
+    <p class="note-desc">立刻補充保濕噴霧；戴帽子＋口罩＋防曬；室內冷氣休息；多喝水；補充膠原蛋白食材。</p>
+    <p class="checklist-label">Olive Young 必買保養品</p>
+    <ul class="checklist">
+      <li>CICA 修復面膜（積雪草成分，術後鎮靜首選）</li>
+      <li>COSRX 蝸牛面膜（修復再生）</li>
+      <li>理膚寶水噴霧（隨時補充保濕）</li>
+      <li>SPF50+ 溫和防曬（低刺激配方）</li>
+    </ul>
+  </div>
+
+  <div class="info-card">
+    <h3 class="info-card-title">🇰🇷 韓國禮節＋求生韓文</h3>
+    <p class="checklist-label">禮節提醒</p>
+    <ul class="checklist">
+      <li>⚠️ 不要在餐桌上擤鼻涕</li>
+      <li>⚠️ 叫店員說「저기요」，不要喊阿珠媽</li>
+      <li>⚠️ 付款親手遞給店員，不要放桌上</li>
+      <li>⚠️ 拍照避免拍到路人和店員</li>
+      <li>⚠️ 路邊少有垃圾桶，自備袋子帶回飯店丟</li>
+    </ul>
+    <p class="checklist-label">求生韓文</p>
+    <table class="info-table">
+      <tr><td>你好</td><td>안녕하세요（安妞哈塞呦）</td></tr>
+      <tr><td>謝謝</td><td>감사합니다（康撒哈密達）</td></tr>
+      <tr><td>叫店員</td><td>저기요（啾gi呦）</td></tr>
+      <tr><td>好吃</td><td>맛있어요（媽西搜呦）</td></tr>
+      <tr><td>對不起</td><td>죄송합니다（啾送哈密達）</td></tr>
+      <tr><td>廁所在哪？</td><td>화장실 어디예요?</td></tr>
+      <tr><td>可以刷卡嗎？</td><td>카드 돼요?</td></tr>
+      <tr><td>可以退稅嗎？</td><td>택스프리 돼요?</td></tr>
+    </table>
+  </div>
+
+  <div class="info-card">
+    <h3 class="info-card-title">🛍 購物清單</h3>
+    <p class="checklist-label">必買伴手禮</p>
+    <p class="note-desc">Busan BADA SAND：手工焦糖奶油夾心餅乾，蜂蜜焦糖口味最推，8/20 在海迎月路購買。</p>
+    <p class="checklist-label">Olive Young 必買</p>
+    <ul class="checklist">
+      <li>TIRTIR 氣墊粉底</li>
+      <li>Anua 角質清潔精華</li>
+      <li>mixsoon 大豆精華</li>
+      <li>isntree 玻尿酸精華</li>
+      <li>COSRX 痘痘貼</li>
+      <li>Round Lab 燕麥保濕霜</li>
+    </ul>
+    <p class="checklist-label">樂天超市必買零食</p>
+    <ul class="checklist">
+      <li>蜂蜜奶油薯片</li>
+      <li>辛拉麵／農心系列</li>
+      <li>韓國海苔禮盒</li>
+      <li>香蕉牛奶</li>
+    </ul>
+  </div>
+
+  <div class="info-card">
+    <h3 class="info-card-title">🚕 常用路線叫車費用對照</h3>
+    <p class="note-desc">起跳 ₩4,800；深夜 22:00 後加成 20%；過廣安大橋加收 ₩1,000。</p>
+    <table class="info-table">
+      <tr><td>機場 → 海雲台</td><td>₩28,000–35,000，約 55 分</td></tr>
+      <tr><td>機場 → 西面</td><td>₩17,000–20,000，約 35 分</td></tr>
+      <tr><td>海雲台 → 廣安里</td><td>₩6,600，約 12 分</td></tr>
+      <tr><td>海雲台 → 龍宮寺</td><td>₩10,900–13,500，約 20 分</td></tr>
+      <tr><td>海雲台 → 松島纜車</td><td>₩18,000–22,000，約 30 分</td></tr>
+      <tr><td>西面 → 廣安里</td><td>₩7,000–9,000，約 12 分</td></tr>
+      <tr><td>Urbanstay → 機場</td><td>₩17,000–20,000，約 35 分</td></tr>
+    </table>
+  </div>
+
+</div>
+<!-- ════════════════ 主分頁四結束 ════════════════ -->
+
+
+<!-- ════════════════ 主分頁四之五：醫美情報 ════════════════ -->
+<div class="main-pane" id="medical">
+
+  <h2 class="pane-title">💉 醫美情報</h2>
+
+  <nav class="subtabs" id="medicalSubtabs" aria-label="選擇醫美子分頁">
+    <button class="sub-tab active" data-sub="med-clinic">診所資訊</button>
+    <button class="sub-tab" data-sub="med-survey">事前問診</button>
+    <button class="sub-tab" data-sub="med-package">套組方案</button>
+    <button class="sub-tab" data-sub="med-collagen">膠原＋肉毒</button>
+    <button class="sub-tab" data-sub="med-ha">玻尿酸</button>
+    <button class="sub-tab" data-sub="med-lift">超聲刀＋電波</button>
+    <button class="sub-tab" data-sub="med-onda">Onda＋溶脂</button>
+    <button class="sub-tab" data-sub="med-skin">水光針</button>
+    <button class="sub-tab" data-sub="med-potenza">Potenza＋除斑</button>
+    <button class="sub-tab" data-sub="med-discount">台港折扣</button>
+  </nav>
+
+  <div class="sub-pane active" id="med-clinic">
+    <div class="info-card medical-card">
+      <h3 class="info-card-title">🏥 美潭醫院 Midam Clinic（미담의원）</h3>
+      <p class="note-desc">⭐ 4.9（182 則評論）・皮膚科（피부과）</p>
+      <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=%EB%AF%B8%EB%8B%B4%EC%9D%98%EC%9B%90+Midam+Clinic+Centum" target="_blank" rel="noopener">📍 開啟地圖導航</a>
+      <p class="checklist-label">預約資訊</p>
+      <table class="info-table">
+        <tr><td>日期</td><td>8月18日（週二）</td></tr>
+        <tr><td>時間</td><td>15:00（乃勻、惠祺兩人皆已預約）</td></tr>
+        <tr><td>地址（韓文）</td><td>부산 해운대구 센텀2로 19 센텀코아 2층</td></tr>
+        <tr><td>周邊地標</td><td>BEXCO、新世代百貨 Centum City（地下連通道可直達）</td></tr>
+        <tr><td>營業開始</td><td>上午 10:00</td></tr>
+        <tr><td>聯絡方式</td><td>海外顧客請透過 Instagram／Threads 聯繫預約（Naver 系統僅供韓國居民使用）</td></tr>
+      </table>
+      <p class="checklist-label">術後注意事項</p>
+      <ul class="checklist">
+        <li>❌ 絕對禁止：汗蒸幕、三溫暖、長時間日曬、戶外劇烈運動、大量出汗</li>
+        <li>✅ 立刻補充保濕噴霧；戴帽子＋口罩＋防曬；室內冷氣休息；多喝水</li>
+        <li>💡 診所大樓與新世界百貨間有地下連通道，可完全不經過戶外</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="sub-pane" id="med-survey">
+    <div class="survey-card">
+      <p class="survey-name">Chang, Nai-Yun（乃勻）</p>
+      <p class="survey-meta">女性・30歲</p>
+      <p class="checklist-label">主要想改善的問題</p>
+      <p class="note-desc">色斑／斑點、毛孔粗大、皺紋、膚色暗沉、痘疤</p>
+      <p class="checklist-label">皮膚狀況</p>
+      <p class="note-desc">T字部位容易出油，雙頰偏乾</p>
+      <p class="checklist-label">過去治療紀錄</p>
+      <p class="note-desc">雷射（淨膚／除斑／皮秒）、Inmode／Onda、水光針；最近治療日期 5/23</p>
+      <p class="checklist-label">病史與過敏</p>
+      <p class="note-desc">無</p>
+      <p class="checklist-label">意願施作項目</p>
+      <p class="note-desc">微針、肉毒、水光針</p>
+      <p class="checklist-label">預算範圍</p>
+      <p class="note-desc">NT$ 30,000–60,000</p>
+    </div>
+
+    <div class="survey-card">
+      <p class="survey-name">Huang, Hui-Chi（惠祺）</p>
+      <p class="survey-meta">女性・55歲</p>
+      <p class="checklist-label">主要想改善的問題</p>
+      <p class="note-desc">皮膚鬆弛、皺紋、雙下巴／下顎線</p>
+      <p class="checklist-label">皮膚狀況</p>
+      <p class="note-desc">正常</p>
+      <p class="checklist-label">過去治療紀錄</p>
+      <p class="note-desc">雷射（淨膚／除斑／皮秒）、Inmode／Onda；最近治療日期：超過一年</p>
+      <p class="checklist-label">病史與過敏</p>
+      <p class="note-desc">高血壓、高血脂；長期服藥：Concor 康肯、Livalo 力清之</p>
+      <p class="checklist-label">意願施作項目</p>
+      <p class="note-desc">美國超聲刀、肉毒</p>
+      <p class="checklist-label">預算範圍</p>
+      <p class="note-desc">NT$ 30,000–60,000</p>
+    </div>
+
+    <div class="info-card">
+      <h3 class="info-card-title">💬 咬肌肉毒詢問回覆（診所 Mina）</h3>
+      <table class="info-table">
+        <tr><td>皺紋肉毒</td><td>韓國產 newlux NT$3萬、coretox NT$6萬，德國Xeomin／英國Dysport NT$8萬</td></tr>
+        <tr><td>咬肌肉毒</td><td>韓國產 newlux NT$6萬、coretox NT$8萬，德國Xeomin／英國Dysport NT$12萬</td></tr>
+        <tr><td>身體肉毒 100unit</td><td>韓國產 newlux NT$10萬、coretox NT$15萬，德國Xeomin／英國Dysport NT$20萬</td></tr>
+      </table>
+      <p class="price-note">以上為未稅價格，另計 10% 韓國附加稅。</p>
+    </div>
+  </div>
+
+  <div class="sub-pane" id="med-package">
+    <div class="price-card">
+      <div class="price-card-head">
+        <p class="price-card-title">套組方案 Package Deals</p>
+        <span class="price-rate-tag">匯率 1萬₩ ≈ NT$224</span>
+      </div>
+      <p class="price-card-sub">淚溝暗沉・法令紋・痘痘管理・線雕拉提</p>
+
+      <div class="price-row"><div><p class="price-row-name">淚溝暗沉套組</p><p class="price-row-sub">Laetigen 膠原蛋白針 2cc + Jamber 埋線 4條</p></div><div class="price-row-value"><p class="price-twd">NT$13,216</p><p class="price-krw">₩590,000</p></div></div>
+      <div class="price-row"><div><p class="price-row-name">法令紋套組</p><p class="price-row-sub">國產玻尿酸 1cc + Jamber 埋線 6條</p></div><div class="price-row-value"><p class="price-twd">NT$8,960</p><p class="price-krw">₩400,000</p></div></div>
+      <div class="price-row"><div><p class="price-row-name">↳ 升級 Amalidan 德國玻尿酸</p></div><div class="price-row-value"><p class="price-twd">+NT$1,792</p><p class="price-krw">+₩80,000</p></div></div>
+      <div class="price-row"><div><p class="price-row-name">↳ 升級 Restylane 瑞絲朗</p></div><div class="price-row-value"><p class="price-twd">+NT$4,704</p><p class="price-krw">+₩210,000</p></div></div>
+      <div class="price-row"><div><p class="price-row-name">痘痘密集管理套組</p><p class="price-row-sub">消炎針／痘痘清除／Gold PTT／Potenza／LDM</p></div><div class="price-row-value"><p class="price-twd">NT$12,320</p><p class="price-krw">₩550,000</p></div></div>
+      <div class="price-row"><div><p class="price-row-name">線雕拉提</p><p class="price-row-sub">Mint 埋線 8條 + Jamber 埋線 8條</p></div><div class="price-row-value"><p class="price-twd">NT$19,712</p><p class="price-krw">₩880,000</p></div></div>
+
+      <p class="price-note">⚠️ 以上價格均為稅前金額，實際消費需另加 10% 韓國附加稅。匯率採用 2026.06.16 參考匯率，僅供參考。（Annie Chang 張乃勻 專屬報價）</p>
+    </div>
+  </div>
+
+  <div class="sub-pane" id="med-collagen">
+    <div class="price-card">
+      <div class="price-card-head">
+        <p class="price-card-title">膠原蛋白增生劑 ＋ 肉毒桿菌</p>
+        <span class="price-rate-tag">匯率 1萬₩ ≈ NT$224</span>
+      </div>
+      <p class="price-card-sub">Sculptra・少女針・Dysport 皇家肉毒</p>
+
+      <p class="price-group-label">膠原蛋白增生劑</p>
+      <div class="price-row"><p class="price-row-name">Sculptra 舒顏萃 1瓶</p><div class="price-row-value"><p class="price-twd">NT$17,920</p><p class="price-krw">₩800,000</p></div></div>
+      <div class="price-row"><p class="price-row-name">Sculptra 舒顏萃 2瓶</p><div class="price-row-value"><p class="price-twd">NT$33,600</p><p class="price-krw">₩1,500,000</p></div></div>
+      <div class="price-row"><p class="price-row-name">Lafullen 第三代少女針 1組</p><div class="price-row-value"><p class="price-twd">NT$12,992</p><p class="price-krw">₩580,000</p></div></div>
+
+      <p class="price-group-label">肉毒桿菌 Dysport — 擴散自然、效果穩定</p>
+      <div class="price-row"><div><p class="price-row-name">Dysport 除皺肉毒 2+1方案</p><p class="price-row-sub">額頭／眉間／眼周／鼻樑｜3部位只付2部位費用</p></div><div class="price-row-value"><p class="price-twd">買2送1</p><p class="price-krw">請洽診所</p></div></div>
+      <div class="price-row"><p class="price-row-name">Dysport 下巴肉毒 100unit</p><div class="price-row-value"><p class="price-twd">NT$5,376</p><p class="price-krw">₩240,000</p></div></div>
+
+      <p class="price-note">⚠️ 以上價格均為稅前金額，實際消費需另加 10% 韓國附加稅。匯率採用 2026.06.16 參考匯率，僅供參考。</p>
+    </div>
+  </div>
+
+  <div class="sub-pane" id="med-ha">
+    <div class="price-card">
+      <div class="price-card-head">
+        <p class="price-card-title">玻尿酸填充 Hyaluronic Acid</p>
+        <span class="price-rate-tag">匯率 1萬₩ ≈ NT$224</span>
+      </div>
+      <p class="price-card-sub">Restylane 瑞絲朗・Amalian 德國・韓國產</p>
+
+      <p class="price-group-label">一般填充</p>
+      <div class="price-row"><p class="price-row-name">Restylane 瑞絲朗 1cc ★買4cc送1cc</p><div class="price-row-value"><p class="price-twd">NT$7,392</p><p class="price-krw">₩330,000</p></div></div>
+      <div class="price-row"><p class="price-row-name">Amalian 德國玻尿酸 1cc ★買4cc送1cc</p><div class="price-row-value"><p class="price-twd">NT$4,480</p><p class="price-krw">₩200,000</p></div></div>
+      <div class="price-row"><p class="price-row-name">Soonsoofil 韓國產 1cc</p><div class="price-row-value"><p class="price-twd">NT$2,688</p><p class="price-krw">₩120,000</p></div></div>
+
+      <p class="price-group-label">眼周・淚溝</p>
+      <div class="price-row"><p class="price-row-name">Restylane Eyelight（淚溝專用）1 syringe</p><div class="price-row-value"><p class="price-twd">NT$5,600</p><p class="price-krw">₩250,000</p></div></div>
+
+      <p class="price-group-label">臥蠶</p>
+      <div class="price-row"><p class="price-row-name">Byryzn 韓國產</p><div class="price-row-value"><p class="price-twd">NT$3,360</p><p class="price-krw">₩150,000</p></div></div>
+      <div class="price-row"><p class="price-row-name">Restylane 瑞絲朗</p><div class="price-row-value"><p class="price-twd">NT$6,720</p><p class="price-krw">₩300,000</p></div></div>
+
+      <p class="price-group-label">皺紋（額頭／眉間／嘴邊）</p>
+      <div class="price-row"><p class="price-row-name">Byryzn 韓國產</p><div class="price-row-value"><p class="price-twd">NT$1,120</p><p class="price-krw">₩50,000</p></div></div>
+      <div class="price-row"><p class="price-row-name">Restylane 瑞絲朗</p><div class="price-row-value"><p class="price-twd">NT$3,360</p><p class="price-krw">₩150,000</p></div></div>
+
+      <p class="price-group-label">頸紋</p>
+      <div class="price-row"><p class="price-row-name">Byryzn 韓國產</p><div class="price-row-value"><p class="price-twd">NT$3,360</p><p class="price-krw">₩150,000</p></div></div>
+      <div class="price-row"><p class="price-row-name">Restylane 瑞絲朗</p><div class="price-row-value"><p class="price-twd">NT$7,840</p><p class="price-krw">₩350,000</p></div></div>
+
+      <p class="price-note">⚠️ 以上價格均為稅前金額，實際消費需另加 10% 韓國附加稅。匯率採用 2026.06.16 參考匯率，僅供參考。</p>
+    </div>
+  </div>
+
+  <div class="sub-pane" id="med-lift">
+    <div class="price-card">
+      <div class="price-card-head">
+        <p class="price-card-title">臉部拉提 — 超聲刀＆電波</p>
+        <span class="price-rate-tag">匯率 1萬₩ ≈ NT$224</span>
+      </div>
+      <p class="price-card-sub">Ultherapy PRIME・Volnewmer・Shurink Universe</p>
+
+      <p class="price-group-label">Ultherapy PRIME 美國超聲刀第二代</p>
+      <div class="price-row"><p class="price-row-name">300 發</p><div class="price-row-value"><p class="price-twd">NT$25,760</p><p class="price-krw">₩1,150,000</p></div></div>
+      <div class="price-row"><p class="price-row-name">400 發</p><div class="price-row-value"><p class="price-twd">NT$32,480</p><p class="price-krw">₩1,450,000</p></div></div>
+      <div class="price-row"><p class="price-row-name">600 發</p><div class="price-row-value"><p class="price-twd">NT$42,560</p><p class="price-krw">₩1,900,000</p></div></div>
+      <div class="price-row"><p class="price-row-name">↳ 搭配 Inmode FX</p><div class="price-row-value"><p class="price-twd">+NT$1,792</p><p class="price-krw">+₩80,000</p></div></div>
+
+      <p class="price-group-label">Volnewmer 海芙電波（含眼部探頭）</p>
+      <div class="price-row"><p class="price-row-name">200 發</p><div class="price-row-value"><p class="price-twd">NT$6,720</p><p class="price-krw">₩300,000</p></div></div>
+      <div class="price-row"><p class="price-row-name">400 發</p><div class="price-row-value"><p class="price-twd">NT$12,544</p><p class="price-krw">₩560,000</p></div></div>
+      <div class="price-row"><p class="price-row-name">600 發</p><div class="price-row-value"><p class="price-twd">NT$16,800</p><p class="price-krw">₩750,000</p></div></div>
+      <div class="price-row"><p class="price-row-name">800 發</p><div class="price-row-value"><p class="price-twd">NT$20,608</p><p class="price-krw">₩920,000</p></div></div>
+
+      <p class="price-group-label">Shurink Universe 海芙音波第四代</p>
+      <div class="price-row"><p class="price-row-name">400 發</p><div class="price-row-value"><p class="price-twd">NT$6,272</p><p class="price-krw">₩280,000</p></div></div>
+      <div class="price-row"><p class="price-row-name">600 發</p><div class="price-row-value"><p class="price-twd">NT$8,064</p><p class="price-krw">₩360,000</p></div></div>
+
+      <p class="price-note">⚠️ 以上價格均為稅前金額，實際消費需另加 10% 韓國附加稅。匯率採用 2026.06.16 參考匯率，僅供參考。</p>
+    </div>
+  </div>
+
+  <div class="sub-pane" id="med-onda">
+    <div class="price-card">
+      <div class="price-card-head">
+        <p class="price-card-title">Onda 瘦臉體雕 ＋ Vivle 溶脂針</p>
+        <span class="price-rate-tag">匯率 1萬₩ ≈ NT$224</span>
+      </div>
+      <p class="price-card-sub">非侵入式輪廓雕塑</p>
+
+      <p class="price-group-label">Onda 瘦臉＆體雕（10kj = NT$1,792）</p>
+      <div class="price-row"><p class="price-row-name">60 kj</p><div class="price-row-value"><p class="price-twd">NT$10,080</p><p class="price-krw">₩450,000</p></div></div>
+      <div class="price-row"><p class="price-row-name">100 kj</p><div class="price-row-value"><p class="price-twd">NT$15,680</p><p class="price-krw">₩700,000</p></div></div>
+      <div class="price-row"><p class="price-row-name">200 kj</p><div class="price-row-value"><p class="price-twd">NT$26,880</p><p class="price-krw">₩1,200,000</p></div></div>
+      <div class="price-row"><p class="price-row-name">↳ 搭配 InmodeFX</p><div class="price-row-value"><p class="price-twd">+NT$1,792</p><p class="price-krw">+₩80,000</p></div></div>
+
+      <p class="price-group-label">Vivle 注射溶脂針</p>
+      <div class="price-row"><p class="price-row-name">1 瓶</p><div class="price-row-value"><p class="price-twd">NT$4,480</p><p class="price-krw">₩200,000</p></div></div>
+      <div class="price-row"><p class="price-row-name">2 瓶</p><div class="price-row-value"><p class="price-twd">NT$8,064</p><p class="price-krw">₩360,000</p></div></div>
+      <div class="price-row"><p class="price-row-name">3 瓶</p><div class="price-row-value"><p class="price-twd">NT$10,080</p><p class="price-krw">₩450,000</p></div></div>
+
+      <p class="price-note">⚠️ 以上價格均為稅前金額，實際消費需另加 10% 韓國附加稅。匯率採用 2026.06.16 參考匯率，僅供參考。</p>
+    </div>
+  </div>
+
+  <div class="sub-pane" id="med-skin">
+    <div class="price-card">
+      <div class="price-card-head">
+        <p class="price-card-title">水光針 Skin Booster</p>
+        <span class="price-rate-tag">匯率 1萬₩ ≈ NT$224</span>
+      </div>
+      <p class="price-card-sub">Rejuran・Juvelook・Skinvive・Potenza</p>
+
+      <div class="price-row"><div><p class="price-row-name">Re2o 1組</p><p class="price-row-sub">限預約</p></div><div class="price-row-value"><p class="price-twd">NT$13,440</p><p class="price-krw">₩600,000</p></div></div>
+      <div class="price-row"><div><p class="price-row-name">Laetigen 2cc</p><p class="price-row-sub">限量名額</p></div><div class="price-row-value"><p class="price-twd">NT$8,960</p><p class="price-krw">₩400,000</p></div></div>
+
+      <p class="price-group-label">Rejuran 麗珠蘭</p>
+      <div class="price-row"><p class="price-row-name">黑盒 2cc</p><div class="price-row-value"><p class="price-twd">NT$5,600</p><p class="price-krw">₩250,000</p></div></div>
+      <div class="price-row"><p class="price-row-name">紅盒 2cc</p><div class="price-row-value"><p class="price-twd">NT$6,720</p><p class="price-krw">₩300,000</p></div></div>
+      <div class="price-row"><p class="price-row-name">白盒 1cc</p><div class="price-row-value"><p class="price-twd">NT$3,360</p><p class="price-krw">₩150,000</p></div></div>
+      <div class="price-row"><p class="price-row-name">黑盒 2cc + Juvelook 藍瓶 2cc + 鎮定</p><div class="price-row-value"><p class="price-twd">NT$8,512</p><p class="price-krw">₩380,000</p></div></div>
+      <div class="price-row"><p class="price-row-name">↳ 升級 Rejuran HB 紅盒</p><div class="price-row-value"><p class="price-twd">+NT$1,120</p><p class="price-krw">+₩50,000</p></div></div>
+      <div class="price-row"><p class="price-row-name">MD Skin Booster（黑盒＋水光針＋皮膚肉毒）</p><div class="price-row-value"><p class="price-twd">NT$7,840</p><p class="price-krw">₩350,000</p></div></div>
+
+      <p class="price-group-label">喬雅登 Skinvive</p>
+      <div class="price-row"><p class="price-row-name">1cc</p><div class="price-row-value"><p class="price-twd">NT$6,048</p><p class="price-krw">₩270,000</p></div></div>
+      <div class="price-row"><p class="price-row-name">2cc</p><div class="price-row-value"><p class="price-twd">NT$11,200</p><p class="price-krw">₩500,000</p></div></div>
+
+      <p class="price-note">⚠️ 以上價格均為稅前金額，實際消費需另加 10% 韓國附加稅。匯率採用 2026.06.16 參考匯率，僅供參考。</p>
+    </div>
+  </div>
+
+  <div class="sub-pane" id="med-potenza">
+    <div class="price-card">
+      <div class="price-card-head">
+        <p class="price-card-title">Potenza 黃金微針 ＋ 除斑美白</p>
+        <span class="price-rate-tag">匯率 1萬₩ ≈ NT$224</span>
+      </div>
+      <p class="price-card-sub">黃金微針・PicoSure 皮秒・Excel V</p>
+
+      <p class="price-group-label">Potenza 黃金微針</p>
+      <div class="price-row"><p class="price-row-name">Needle Tip 全臉</p><div class="price-row-value"><p class="price-twd">NT$5,600</p><p class="price-krw">₩250,000</p></div></div>
+      <div class="price-row"><p class="price-row-name">含 Pumping Tip + Juvelook Skin 半瓶 + 鎮定</p><div class="price-row-value"><p class="price-twd">NT$10,080</p><p class="price-krw">₩450,000</p></div></div>
+      <div class="price-row"><p class="price-row-name">含 Pumping Tip + Exosome 外泌體 2.5cc + 鎮定</p><div class="price-row-value"><p class="price-twd">NT$7,840</p><p class="price-krw">₩350,000</p></div></div>
+      <div class="price-row"><p class="price-row-name">含 Pumping Tip + PDRN 3cc + 鎮定</p><div class="price-row-value"><p class="price-twd">NT$6,720</p><p class="price-krw">₩300,000</p></div></div>
+
+      <p class="price-group-label">除斑・美白管理</p>
+      <div class="price-row"><p class="price-row-name">PicoSure 皮秒蜂巢 + Brighton</p><div class="price-row-value"><p class="price-twd">NT$3,360</p><p class="price-krw">₩150,000</p></div></div>
+      <div class="price-row"><p class="price-row-name">Excel V 除斑雷射</p><div class="price-row-value"><p class="price-twd">NT$5,600</p><p class="price-krw">₩250,000</p></div></div>
+      <div class="price-row"><p class="price-row-name">Excel V + PicoSure 皮秒</p><div class="price-row-value"><p class="price-twd">NT$6,720</p><p class="price-krw">₩300,000</p></div></div>
+      <div class="price-row"><p class="price-row-name">下巴美白雷射</p><div class="price-row-value"><p class="price-twd">NT$1,568</p><p class="price-krw">₩70,000</p></div></div>
+
+      <p class="price-note">⚠️ 以上價格均為稅前金額，實際消費需另加 10% 韓國附加稅。匯率採用 2026.06.16 參考匯率，僅供參考。</p>
+    </div>
+  </div>
+
+  <div class="sub-pane" id="med-discount">
+    <div class="price-card">
+      <div class="price-card-head">
+        <p class="price-card-title">🎁 台灣／香港顧客專屬折扣</p>
+        <span class="price-rate-tag">匯率 1萬₩ ≈ NT$224</span>
+      </div>
+      <p class="price-card-sub">親友、家人可合併計算消費金額（乃勻＋惠祺兩人消費可一起累計）</p>
+
+      <div class="price-row"><p class="price-row-name">消費滿 NT$22,400（₩100萬）</p><div class="price-row-value"><p class="price-twd">折抵 NT$1,120</p><p class="price-krw">₩5萬</p></div></div>
+      <div class="price-row"><p class="price-row-name">消費滿 NT$44,800（₩200萬）</p><div class="price-row-value"><p class="price-twd">折抵 NT$2,688</p><p class="price-krw">₩12萬</p></div></div>
+      <div class="price-row"><p class="price-row-name">消費滿 NT$67,200（₩300萬）</p><div class="price-row-value"><p class="price-twd">折抵 NT$4,480</p><p class="price-krw">₩20萬</p></div></div>
+      <div class="price-row"><p class="price-row-name">消費滿 NT$112,000（₩500萬）</p><div class="price-row-value"><p class="price-twd">折抵 NT$8,960</p><p class="price-krw">₩40萬</p></div></div>
+      <div class="price-row"><p class="price-row-name">消費滿 NT$224,000（₩1000萬）</p><div class="price-row-value"><p class="price-twd">折抵 NT$22,400</p><p class="price-krw">₩100萬</p></div></div>
+
+      <p class="price-note">✈️ 海外顧客請透過 Instagram／Threads 聯繫預約（Naver 系統僅供韓國居民使用）。所有價格均為未含 10% 韓國附加稅之稅前金額，匯率採用 2026.06.16 參考匯率 1萬韓元≈NT$224，僅供參考，實際依換匯當日為準。</p>
+    </div>
+  </div>
+
+</div>
+<!-- ════════════════ 主分頁四之五結束 ════════════════ -->
+
+
+<!-- ════════════════ 主分頁五：記帳本 ════════════════ -->
+<div class="main-pane" id="budget">
+
+  <h2 class="pane-title">💰 旅費記帳本</h2>
+  <p class="budget-intro">每新增一筆花費，會同時存在這支手機瀏覽器裡，也會自動同步到共用的 Google 試算表「乃勻」或「惠祺」分頁，兩人都看得到彼此花了多少。若尚未連接試算表，資料仍會留在手機裡，只是不會同步。</p>
+
+  <div class="info-card">
+    <h3 class="info-card-title">💱 韓幣匯率（自動更新）</h3>
+    <p id="rateStatus" class="rate-status">正在抓取今天的匯率…</p>
+    <div class="rate-row">
+      <label for="exchangeRate">1 韓元（KRW）＝ 多少台幣（TWD）</label>
+      <input type="number" id="exchangeRate" step="0.0001" value="0.0238" inputmode="decimal">
+    </div>
+    <button type="button" id="refreshRateBtn" class="refresh-rate-btn">🔄 重新抓取今天匯率</button>
+    <p class="note-desc">開啟這頁時會自動抓今天的匯率，不用自己查。如果你手動改了數字，系統就會記住你改的這個，不會再自動覆蓋，除非你按上面的重新抓取。</p>
+  </div>
+
+  <div class="info-card">
+    <h3 class="info-card-title">➕ 新增一筆花費</h3>
+    <form id="expenseForm" class="expense-form">
+      <div class="form-row">
+        <label for="expDate">日期</label>
+        <input type="date" id="expDate" required>
+      </div>
+      <div class="form-row">
+        <label for="expItem">品項</label>
+        <input type="text" id="expItem" placeholder="例如：海東龍宮寺午餐" required>
+      </div>
+      <div class="form-row">
+        <label for="expQty">數目</label>
+        <input type="number" id="expQty" placeholder="預設 1" value="1" min="1" inputmode="numeric">
+      </div>
+      <div class="form-row">
+        <label for="expAmount">價錢（韓元 ₩）</label>
+        <input type="number" id="expAmount" placeholder="例如：25000" inputmode="numeric" required>
+      </div>
+      <div class="form-row">
+        <label for="expCategory">分類</label>
+        <select id="expCategory">
+          <option value="餐飲">🍜 餐飲</option>
+          <option value="購物">🛍 購物</option>
+          <option value="交通">🚕 交通</option>
+          <option value="門票">🎫 門票／景點</option>
+          <option value="住宿">🏨 住宿</option>
+          <option value="其他">📦 其他</option>
+        </select>
+      </div>
+      <div class="form-row">
+        <label for="expMethod">付款方式</label>
+        <select id="expMethod">
+          <option value="信用卡">信用卡</option>
+          <option value="現金">現金</option>
+          <option value="電子支付">電子支付</option>
+          <option value="其他">其他</option>
+        </select>
+      </div>
+      <div class="form-row" id="expMethodOtherRow" style="display:none;">
+        <label for="expMethodOther">付款方式（其他，請說明）</label>
+        <input type="text" id="expMethodOther" placeholder="例如：飯店代刷">
+      </div>
+      <div class="form-row">
+        <label for="expPaymentInfo">付款資訊</label>
+        <select id="expPaymentInfo">
+          <option value="台灣PAY">台灣PAY</option>
+          <option value="Linepay">Linepay</option>
+          <option value="街口支付">街口支付</option>
+          <option value="台新玫瑰卡">台新玫瑰卡</option>
+          <option value="國泰CUBE卡">國泰CUBE卡</option>
+          <option value="其他">其他</option>
+        </select>
+      </div>
+      <div class="form-row" id="expPaymentInfoOtherRow" style="display:none;">
+        <label for="expPaymentInfoOther">付款資訊（其他，請說明）</label>
+        <input type="text" id="expPaymentInfoOther" placeholder="例如：現金韓元">
+      </div>
+      <div class="form-row">
+        <label for="expNote">備註</label>
+        <input type="text" id="expNote" placeholder="選填，例如：兩人平分">
+      </div>
+      <div class="form-row">
+        <label>付款人</label>
+        <div class="payer-toggle" id="payerToggle" role="radiogroup" aria-label="選擇付款人">
+          <button type="button" class="payer-toggle-btn active" data-payer="乃勻">乃勻</button>
+          <button type="button" class="payer-toggle-btn" data-payer="惠祺">惠祺</button>
+        </div>
+        <input type="hidden" id="expPayer" value="乃勻">
+      </div>
+      <button type="submit" class="submit-btn" id="submitExpenseBtn">新增這筆花費（同步到 Google 試算表）</button>
+      <p id="syncStatus" class="sync-status"></p>
+    </form>
+  </div>
+
+  <div class="info-card">
+    <h3 class="info-card-title">📊 花費總覽</h3>
+    <div class="summary-grid" id="summaryGrid">
+      <div class="summary-box">
+        <p class="summary-label">總花費（韓元）</p>
+        <p class="summary-value" id="totalKRW">₩0</p>
+      </div>
+      <div class="summary-box">
+        <p class="summary-label">總花費（台幣）</p>
+        <p class="summary-value" id="totalTWD">NT$0</p>
+      </div>
+    </div>
+    <p class="checklist-label">依付款人</p>
+    <div id="payerSummary" class="payer-summary"></div>
+    <p class="checklist-label">依分類</p>
+    <div id="categorySummary" class="payer-summary"></div>
+  </div>
+
+  <div class="info-card">
+    <h3 class="info-card-title">📒 花費明細</h3>
+    <div id="expenseList" class="expense-list">
+      <p class="empty-state">還沒有任何花費紀錄，新增第一筆吧！</p>
+    </div>
+  </div>
+
+  <div class="export-row">
+    <button id="exportBtn" class="export-btn">📋 複製明細文字（傳給對方對帳）</button>
+    <p id="exportStatus" class="export-status"></p>
+  </div>
+
+  <button id="clearAllBtn" class="clear-btn">清空所有記帳資料</button>
+
+</div>
+<!-- ════════════════ 主分頁五結束 ════════════════ -->
+
+</main>
+
+<button id="backToTop" class="back-to-top hidden" aria-label="回到頂端">↑</button>
+
+<footer class="footer">
+  <p>祝媽媽和我有一趟最悠閒放鬆的釜山假期 🌊</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
